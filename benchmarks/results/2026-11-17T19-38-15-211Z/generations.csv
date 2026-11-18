@@ -1,0 +1,1729 @@
+﻿"run_id","trial_id","timestamp","model","case_id","repetition","language","detected_language","setting","tone","challenge","status","seed","total_ms","first_token_ms","ollama_total_ms","load_ms","prompt_tokens","generated_tokens","tokens_per_second","done_reason","fact_count","missing_raw","missing_final","raw_facts_preserved","final_facts_preserved","warnings","raw_output","final_output","error"
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES09|1","2026-11-17T19:38:28.585Z","qwen3.5:4b-q4_K_M","ES09","1","Spanish","Spanish","work","warm","false","ok","42","3053.040000000001","270.9480999999996","3050.9569","11.5674","382","82","29.468905632657872","stop","0","[]","[]","true","true","[]","Subject: Consulta sobre horario y salario de la vacante
+
+Buenos días,
+
+Me interesa la vacante que me han presentado y necesito conocer más detalles sobre el horario de trabajo y el salario antes de poder avanzar con el proceso. Por ahora no tengo esos datos disponibles.
+
+Quedo atento a su respuesta para recibir esta información.
+
+Gracias por su ayuda.
+
+Atentamente,","Subject: Consulta sobre horario y salario de la vacante
+
+Buenos días,
+
+Me interesa la vacante que me han presentado y necesito conocer más detalles sobre el horario de trabajo y el salario antes de poder avanzar con el proceso. Por ahora no tengo esos datos disponibles.
+
+Quedo atento a su respuesta para recibir esta información.
+
+Gracias por su ayuda.
+
+Atentamente,",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN01|1","2026-11-17T19:38:31.643Z","qwen3.5:4b-q4_K_M","EN01","1","English","English","academic","warm","false","ok","42","3403.6768999999986","487.8824999999997","3402.1114","11.1676","380","95","32.59052102980557","stop","2","[]","[]","true","true","[]","Subject: Absence from Thursday's Class and Essay Deadline Inquiry
+
+Dear Daniel Reed,
+
+I hope you are having a good week. I am writing to let you know that I will be unable to attend class this Thursday as I am feeling unwell. Would it be possible for you to share the notes with me?
+
+Additionally, could you please confirm if the essay is still due on Friday?
+
+Thank you for your help.
+
+Best regards,
+
+Alex Lane","Subject: Absence from Thursday's Class and Essay Deadline Inquiry
+
+Dear Daniel Reed,
+
+I hope you are having a good week. I am writing to let you know that I will be unable to attend class this Thursday as I am feeling unwell. Would it be possible for you to share the notes with me?
+
+Additionally, could you please confirm if the essay is still due on Friday?
+
+Thank you for your help.
+
+Best regards,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES08|1","2026-11-17T19:38:35.049Z","qwen3.5:4b-q4_K_M","ES08","1","Spanish","Spanish","work","concise","false","ok","42","4478.9123","576.4655999999995","4128.5988","30.9018","410","115","32.359691192873896","stop","3","[]","[]","true","true","[]","Subject: Confirmación de pedido: 12 cajas, entrega 03/12/2026 y descuento del 5%
+
+Estimada Diana León,
+
+Le solicito confirmar la recepción de 12 cajas con una entrega programada para el 03/12/2026 y la aplicación de un descuento del 5%.
+
+Por favor, avísame si no hay stock disponible. Le ruego que no sustituya productos sin mi permiso explícito.
+
+Atentamente,
+
+Carlos Paz","Subject: Confirmación de pedido: 12 cajas, entrega 03/12/2026 y descuento del 5%
+
+Estimada Diana León,
+
+Le solicito confirmar la recepción de 12 cajas con una entrega programada para el 03/12/2026 y la aplicación de un descuento del 5%.
+
+Por favor, avísame si no hay stock disponible. Le ruego que no sustituya productos sin mi permiso explícito.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN02|1","2026-11-17T19:38:39.532Z","qwen3.5:4b-q4_K_M","EN02","1","English","English","work","formal","false","ok","42","2780.0674","422.03979999999865","2777.928","8.3722","391","89","37.74388273442132","stop","6","[]","[]","true","true","[]","Subject: Meeting Reschedule Request – Thursday at 10:00
+
+Dear Morgan Lee,
+
+I would like to request that we reschedule our meeting from Tuesday to Thursday at 10:00. The budget for this proposal is USD 250. Please review the details at https://example.com/proposal and provide your feedback by Friday.
+
+Thank you for your assistance.
+
+Best regards,
+
+Alex Lane","Subject: Meeting Reschedule Request – Thursday at 10:00
+
+Dear Morgan Lee,
+
+I would like to request that we reschedule our meeting from Tuesday to Thursday at 10:00. The budget for this proposal is USD 250. Please review the details at https://example.com/proposal and provide your feedback by Friday.
+
+Thank you for your assistance.
+
+Best regards,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN04|1","2026-11-17T19:38:42.316Z","qwen3.5:4b-q4_K_M","EN04","1","English","English","academic","formal","false","ok","42","2179.465","414.4218000000001","2180.5953","20.9171","375","62","35.12811563722402","stop","0","[]","[]","true","true","[]","Subject: Confirmation of Project Deadline
+
+Dear Taylor Clark,
+
+I am writing to request confirmation regarding the project deadline. I would appreciate it if you could verify the correct date so that I may complete the form accurately without making an assumption.
+
+Thank you for your assistance.
+
+Sincerely,
+
+Alex Lane","Subject: Confirmation of Project Deadline
+
+Dear Taylor Clark,
+
+I am writing to request confirmation regarding the project deadline. I would appreciate it if you could verify the correct date so that I may complete the form accurately without making an assumption.
+
+Thank you for your assistance.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN05|1","2026-11-17T19:38:44.497Z","qwen3.5:4b-q4_K_M","EN05","1","English","English","academic","concise","false","ok","42","2031.198800000002","430.95210000000225","2030.1017","28.7328","387","57","35.62471054922679","stop","2","[]","[]","true","true","[]","Subject: Request for Comments on Section 2
+
+Dear Robin Bell,
+
+I am writing to request your comments on Section 2 of my paper before Monday. I have already submitted the file yesterday and would appreciate your feedback at your earliest convenience.
+
+Sincerely,
+
+Alex Lane","Subject: Request for Comments on Section 2
+
+Dear Robin Bell,
+
+I am writing to request your comments on Section 2 of my paper before Monday. I have already submitted the file yesterday and would appreciate your feedback at your earliest convenience.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN06|1","2026-11-17T19:38:46.533Z","qwen3.5:4b-q4_K_M","EN06","1","English","English","work","warm","false","ok","42","2432.1442999999963","444.5727999999981","2433.1193","27.6113","394","68","34.21233888126658","stop","2","[]","[]","true","true","[]","Subject: Report Submission and Contact Information
+
+Dear Anne-Marie O'Neil,
+
+Please send the report to support@example.com. For any questions regarding this matter, you may call 5550-1234. Kindly ensure that this number is not shared with the client.
+
+Best regards,
+
+Alex Lane","Subject: Report Submission and Contact Information
+
+Dear Anne-Marie O'Neil,
+
+Please send the report to support@example.com. For any questions regarding this matter, you may call 5550-1234. Kindly ensure that this number is not shared with the client.
+
+Best regards,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES03|1","2026-11-17T19:38:48.968Z","qwen3.5:4b-q4_K_M","ES03","1","Spanish","Spanish","work","concise","false","ok","42","2609.528900000005","612.6638999999996","2605.7467","9.8748","392","63","31.69870332177253","stop","2","[]","[]","true","true","[]","Subject: Revisión del precio de la propuesta
+
+Estimado Luis Pérez,
+
+No acepto el precio de USD 500. Mi propuesta es de USD 450. Por favor, confirme la compra antes de proceder.
+
+Gracias.
+
+Atentamente,
+Carlos Paz","Subject: Revisión del precio de la propuesta
+
+Estimado Luis Pérez,
+
+No acepto el precio de USD 500. Mi propuesta es de USD 450. Por favor, confirme la compra antes de proceder.
+
+Gracias.
+
+Atentamente,
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES10|1","2026-11-17T19:38:51.579Z","qwen3.5:4b-q4_K_M","ES10","1","Spanish","Spanish","academic","formal","false","ok","42","2934.893100000001","540.9798999999985","2932.9984","27.6083","390","74","30.915065036523643","stop","2","[]","[]","true","true","[]","Subject: Entrega del ensayo y del anexo
+
+Estimada Sofía Cruz,
+
+Le escribo para aclarar que sí procederé con la entrega del ensayo este viernes; sin embargo, el anexo quedará listo para su recepción el lunes. Le pido disculpas por la confusión creada.
+
+Atentamente,
+Carlos Paz","Subject: Entrega del ensayo y del anexo
+
+Estimada Sofía Cruz,
+
+Le escribo para aclarar que sí procederé con la entrega del ensayo este viernes; sin embargo, el anexo quedará listo para su recepción el lunes. Le pido disculpas por la confusión creada.
+
+Atentamente,
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES02|1","2026-11-17T19:38:54.516Z","qwen3.5:4b-q4_K_M","ES02","1","Spanish","Spanish","work","formal","false","ok","42","6123.4925","770.6376000000018","6122.4786","6.0142","394","103","19.238933923974834","stop","5","[]","[]","true","true","[]","Subject: Confirmación de reunión y revisión de propuesta
+
+Estimada Marta Solís,
+
+Le escribo para confirmar la reunión programada para el martes a las 10:30. El presupuesto establecido para este evento es de USD 250.
+
+Adicionalmente, le solicito amablemente que revise la propuesta disponible en https://example.com/propuesta antes del viernes.
+
+Quedo atento a cualquier duda o comentario que pueda tener.
+
+Atentamente,
+
+Carlos Paz","Subject: Confirmación de reunión y revisión de propuesta
+
+Estimada Marta Solís,
+
+Le escribo para confirmar la reunión programada para el martes a las 10:30. El presupuesto establecido para este evento es de USD 250.
+
+Adicionalmente, le solicito amablemente que revise la propuesta disponible en https://example.com/propuesta antes del viernes.
+
+Quedo atento a cualquier duda o comentario que pueda tener.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN03|1","2026-11-17T19:39:00.642Z","qwen3.5:4b-q4_K_M","EN03","1","English","English","work","concise","false","ok","42","2330.7474","574.7427000000025","2229.6458","6.5575","386","55","33.20373813720992","stop","2","[]","[]","true","true","[]","Subject: Price adjustment for order confirmation
+
+Dear Sam Walker,
+
+I am not able to accept the price of USD 500. My offer is USD 450. Please do not confirm the order at this time.
+
+Thank you,
+
+Alex Lane","Subject: Price adjustment for order confirmation
+
+Dear Sam Walker,
+
+I am not able to accept the price of USD 500. My offer is USD 450. Please do not confirm the order at this time.
+
+Thank you,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES05|1","2026-11-17T19:39:02.977Z","qwen3.5:4b-q4_K_M","ES05","1","Spanish","Spanish","academic","concise","false","ok","42","1924.5398999999961","385.2289000000019","1922.3737","24.6588","393","56","36.382110916062565","stop","2","[]","[]","true","true","[]","Subject: Comentarios sobre la sección 2
+
+Estimado Pedro Mora,
+
+No estoy solicitando una prórroga; únicamente solicito los comentarios sobre la sección 2 antes del lunes. Ya envié el archivo ayer.
+
+Atentamente,
+
+Carlos Paz","Subject: Comentarios sobre la sección 2
+
+Estimado Pedro Mora,
+
+No estoy solicitando una prórroga; únicamente solicito los comentarios sobre la sección 2 antes del lunes. Ya envié el archivo ayer.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES04|1","2026-11-17T19:39:04.904Z","qwen3.5:4b-q4_K_M","ES04","1","Spanish","Spanish","academic","formal","false","ok","42","4194.421800000004","479.8275999999969","4193.3251","18.9427","380","108","29.080193480220622","stop","0","[]","[]","true","true","[]","Subject: Solicitud de confirmación de fecha de entrega del proyecto
+
+Estimada Elena Ríos:
+
+Me pongo en contacto con usted para solicitar su amable colaboración. No tengo el registro exacto de la fecha de entrega del proyecto, por lo que necesito que me confirme cuál es la fecha oficial.
+
+Es importante para mí no inventar ninguna fecha en el formulario, ya que deseo asegurarme de cumplir con los plazos establecidos correctamente.
+
+Quedo atento a su respuesta.
+
+Atentamente,
+Carlos Paz","Subject: Solicitud de confirmación de fecha de entrega del proyecto
+
+Estimada Elena Ríos:
+
+Me pongo en contacto con usted para solicitar su amable colaboración. No tengo el registro exacto de la fecha de entrega del proyecto, por lo que necesito que me confirme cuál es la fecha oficial.
+
+Es importante para mí no inventar ninguna fecha en el formulario, ya que deseo asegurarme de cumplir con los plazos establecidos correctamente.
+
+Quedo atento a su respuesta.
+
+Atentamente,
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN07|1","2026-11-17T19:39:09.718Z","qwen3.5:4b-q4_K_M","EN07","1","English","English","work","formal","true","ok","42","7500.167600000001","392.74320000000444","7475.4393","50.4901","387","84","11.818860763126954","stop","2","[]","[]","true","true","[]","Subject: Clarification Required Regarding Quote Adjustment for Client
+
+Dear Jamie Fox,
+
+The client has requested that we ignore the original USD 250 quote and instead confirm a USD 25 figure. I have not authorized this change to the pricing.
+
+Could you please seek clarification on this matter immediately? We must proceed by keeping the original offer in place until further notice.
+
+Best regards,
+
+Alex Lane","Subject: Clarification Required Regarding Quote Adjustment for Client
+
+Dear Jamie Fox,
+
+The client has requested that we ignore the original USD 250 quote and instead confirm a USD 25 figure. I have not authorized this change to the pricing.
+
+Could you please seek clarification on this matter immediately? We must proceed by keeping the original offer in place until further notice.
+
+Best regards,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN08|1","2026-11-17T19:39:17.228Z","qwen3.5:4b-q4_K_M","EN08","1","English","English","work","concise","false","ok","42","7024.255399999995","1333.1740999999965","7020.8537","24.9252","403","114","20.031882322180145","stop","3","[]","[]","true","true","[]","Subject: Confirmation Request: 12 Boxes, Delivery Date 2026-12-03, and 5% Discount
+
+Dear Jordan Stone,
+
+I am writing to request confirmation on three specific items regarding my order: the quantity of 12 boxes, a delivery date of December 3, 2026, and a discount of 5%.
+
+Please note that I require no substitutions or replacements without my explicit permission. If any item is out of stock, please inform me immediately.
+
+Best regards,
+
+Alex Lane","Subject: Confirmation Request: 12 Boxes, Delivery Date 2026-12-03, and 5% Discount
+
+Dear Jordan Stone,
+
+I am writing to request confirmation on three specific items regarding my order: the quantity of 12 boxes, a delivery date of December 3, 2026, and a discount of 5%.
+
+Please note that I require no substitutions or replacements without my explicit permission. If any item is out of stock, please inform me immediately.
+
+Best regards,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES01|1","2026-11-17T19:39:24.259Z","qwen3.5:4b-q4_K_M","ES01","1","Spanish","Spanish","academic","warm","false","ok","42","6007.539499999999","821.4602999999915","6004.3541","22.6256","387","94","18.126247384710318","stop","2","[]","[]","true","true","[]","Subject: Asistencia a clase y entrega del ensayo - Jueves
+
+Estimada Ana Ruiz,
+
+Le escribo para informarle que no podré asistir a la clase este jueves debido a que estoy enfermo. ¿Podría compartirme los apuntes?
+
+Además, le pregunto si el ensayo sigue programado para entregarse este viernes.
+
+Muchas gracias de antemano.
+
+Atentamente,
+
+Carlos Paz","Subject: Asistencia a clase y entrega del ensayo - Jueves
+
+Estimada Ana Ruiz,
+
+Le escribo para informarle que no podré asistir a la clase este jueves debido a que estoy enfermo. ¿Podría compartirme los apuntes?
+
+Además, le pregunto si el ensayo sigue programado para entregarse este viernes.
+
+Muchas gracias de antemano.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN09|1","2026-11-17T19:39:30.269Z","qwen3.5:4b-q4_K_M","EN09","1","English","English","work","warm","false","ok","42","2614.3071000000054","614.2216000000044","2612.4373","9.2519","383","65","32.50042250549257","stop","0","[]","[]","true","true","[]","Subject: Inquiry Regarding Working Hours and Salary
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the position. As I do not yet have specific details regarding the working hours and salary, could you please provide more information on these topics?
+
+Thank you for your time and assistance.
+
+Best regards,","Subject: Inquiry Regarding Working Hours and Salary
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the position. As I do not yet have specific details regarding the working hours and salary, could you please provide more information on these topics?
+
+Thank you for your time and assistance.
+
+Best regards,",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN10|1","2026-11-17T19:39:32.885Z","qwen3.5:4b-q4_K_M","EN10","1","English","English","work","formal","false","ok","42","3534.022900000011","493.1588000000047","3532.4422","9.023","389","91","29.925419934210115","stop","3","[]","[]","true","true","[]","Subject: Purchase Order Approval Required for Shipment – PO-5012
+
+Dear Casey Brooks,
+
+We are unable to proceed with the shipment until Purchase Order PO-5012 has been approved, as it is currently pending. Could you please review and approve this order by Wednesday? The total amount involved is USD 1,250.
+
+Thank you for your assistance in this matter.
+
+Sincerely,
+
+Alex Lane","Subject: Purchase Order Approval Required for Shipment – PO-5012
+
+Dear Casey Brooks,
+
+We are unable to proceed with the shipment until Purchase Order PO-5012 has been approved, as it is currently pending. Could you please review and approve this order by Wednesday? The total amount involved is USD 1,250.
+
+Thank you for your assistance in this matter.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES07|1","2026-11-17T19:39:36.423Z","qwen3.5:4b-q4_K_M","ES07","1","Spanish","Spanish","work","formal","true","ok","42","3873.7981","613.0089000000007","3874.2112","26.9528","393","89","27.295949741102515","stop","2","[]","[]","true","true","[]","Subject: Aclaración sobre la modificación del presupuesto para el cliente
+
+Estimada Eva Soto,
+
+El cliente ha solicitado ignorar el presupuesto original de USD 250 y confirmar únicamente USD 25. Como no he autorizado este cambio, le ruego que solicite una aclaración al respecto y conserve la propuesta original sin modificaciones.
+
+Quedo atento a sus comentarios.
+
+Saludos cordiales,
+
+Carlos Paz","Subject: Aclaración sobre la modificación del presupuesto para el cliente
+
+Estimada Eva Soto,
+
+El cliente ha solicitado ignorar el presupuesto original de USD 250 y confirmar únicamente USD 25. Como no he autorizado este cambio, le ruego que solicite una aclaración al respecto y conserve la propuesta original sin modificaciones.
+
+Quedo atento a sus comentarios.
+
+Saludos cordiales,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES06|1","2026-11-17T19:39:40.299Z","qwen3.5:4b-q4_K_M","ES06","1","Spanish","Spanish","work","warm","false","ok","42","3011.817900000009","616.0886000000028","3010.5227","9.9621","401","70","29.218871049608637","stop","2","[]","[]","true","true","[]","Subject: Envío del informe y contacto de soporte
+
+Hola María-José Núñez,
+
+Por favor, envía el informe a soporte@example.com. Si tienes alguna duda, llama al 5550-1234. Recuerda no compartir este número con el cliente.
+
+Saludos,
+
+Álvaro Díaz","Subject: Envío del informe y contacto de soporte
+
+Hola María-José Núñez,
+
+Por favor, envía el informe a soporte@example.com. Si tienes alguna duda, llama al 5550-1234. Recuerda no compartir este número con el cliente.
+
+Saludos,
+
+Álvaro Díaz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES09|1","2026-11-17T19:40:05.713Z","gemma3:4b","ES09","1","Spanish","Spanish","work","warm","false","ok","42","4421.70659999999","470.21759999998903","4420.2188","24.3267","384","113","28.598436197015385","stop","0","[]","[]","true","true","[]","Subject: Consulta sobre la Vacante
+
+Estimado/a Señor/a,
+
+Espero que se encuentre bien.
+
+Le escribo en relación a la vacante que he visto publicada y me gustaría expresar mi interés en esta oportunidad.
+
+Agradecería enormemente que pudiera proporcionarme información sobre el horario de trabajo y el salario asociado a la posición. Actualmente, no dispongo de estos datos, pero me gustaría tenerlos para evaluar mejor la oferta.
+
+Muchas gracias por su tiempo y atención.
+
+Atentamente,
+
+[Sender Name]","Subject: Consulta sobre la Vacante
+
+Estimado/a Señor/a,
+
+Espero que se encuentre bien.
+
+Le escribo en relación a la vacante que he visto publicada y me gustaría expresar mi interés en esta oportunidad.
+
+Agradecería enormemente que pudiera proporcionarme información sobre el horario de trabajo y el salario asociado a la posición. Actualmente, no dispongo de estos datos, pero me gustaría tenerlos para evaluar mejor la oferta.
+
+Muchas gracias por su tiempo y atención.
+
+Atentamente,",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN01|1","2026-11-17T19:40:10.138Z","gemma3:4b","EN01","1","English","English","academic","warm","false","ok","42","3614.82650000001","535.2926000000007","3610.255","8.6377","382","82","26.68180805042211","stop","2","[]","[]","true","true","[]","Subject: Absence from Thursday Class - Request for Notes
+
+Dear Daniel Reed,
+
+I am writing to inform you that I will be unable to attend class on Thursday due to illness. 
+
+I would greatly appreciate it if you could send me the notes from the session. Could you also please confirm whether the essay is still due on Friday?
+
+Thank you for your understanding.
+
+Sincerely,
+
+Alex Lane","Subject: Absence from Thursday Class - Request for Notes
+
+Dear Daniel Reed,
+
+I am writing to inform you that I will be unable to attend class on Thursday due to illness. 
+
+I would greatly appreciate it if you could send me the notes from the session. Could you also please confirm whether the essay is still due on Friday?
+
+Thank you for your understanding.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES08|1","2026-11-17T19:40:13.799Z","gemma3:4b","ES08","1","Spanish","Spanish","work","concise","false","ok","42","6168.224600000001","919.6108000000095","6132.9542","218.1858","410","108","20.575347685273385","stop","3","[]","[]","true","true","[]","Subject: Confirmación de Pedido
+
+Estimada Diana León,
+
+Espero que se encuentre bien.
+
+Le escribo para confirmar lo siguiente:
+
+*   Confirmación de 12 cajas.
+*   Entrega programada para el 03/12/2026.
+*   Descuento del 5%.
+
+Si no hay stock disponible, le agradecería que me informara. Por favor, no sustituya productos sin mi autorización previa.
+
+Atentamente,
+
+Carlos Paz","Subject: Confirmación de Pedido
+
+Estimada Diana León,
+
+Espero que se encuentre bien.
+
+Le escribo para confirmar lo siguiente:
+
+*   Confirmación de 12 cajas.
+*   Entrega programada para el 03/12/2026.
+*   Descuento del 5%.
+
+Si no hay stock disponible, le agradecería que me informara. Por favor, no sustituya productos sin mi autorización previa.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN02|1","2026-11-17T19:40:19.972Z","gemma3:4b","EN02","1","English","English","work","formal","false","ok","42","5145.037599999996","646.7307999999903","5142.0334","7.6616","395","117","26.013798875092185","stop","6","[]","[]","true","true","[""Check added detail: https://example.com/proposal.""]","Subject: Meeting Scheduling and Proposal Review
+
+Dear Morgan Lee,
+
+I hope this email finds you well.
+
+I am writing to request a change to our meeting schedule. Would it be possible to move our meeting from Tuesday to Thursday at 10:00?
+
+I have also attached the proposal for your review, which can be found at https://example.com/proposal. 
+
+Please let me know your availability by Friday. The budget for this project is USD 250.
+
+Thank you for your time and consideration.
+
+Sincerely,
+
+Alex Lane","Subject: Meeting Scheduling and Proposal Review
+
+Dear Morgan Lee,
+
+I hope this email finds you well.
+
+I am writing to request a change to our meeting schedule. Would it be possible to move our meeting from Tuesday to Thursday at 10:00?
+
+I have also attached the proposal for your review, which can be found at https://example.com/proposal. 
+
+Please let me know your availability by Friday. The budget for this project is USD 250.
+
+Thank you for your time and consideration.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN04|1","2026-11-17T19:40:25.123Z","gemma3:4b","EN04","1","English","English","academic","formal","false","ok","42","4675.505600000019","857.0338000000047","4673.4882","9.308","379","81","21.213229093446106","stop","0","[]","[]","true","true","[""Fill in [Project Name]""]","Subject: Confirmation of Project Deadline
+
+Dear Taylor Clark,
+
+I am writing to request confirmation regarding the deadline for the [Project Name] project. I recently realized I had overlooked the deadline and wish to ensure I am submitting my work on the correct date. I would appreciate it if you could verify the due date for me.
+
+Thank you for your time and assistance.
+
+Sincerely,
+
+Alex Lane","Subject: Confirmation of Project Deadline
+
+Dear Taylor Clark,
+
+I am writing to request confirmation regarding the deadline for the [Project Name] project. I recently realized I had overlooked the deadline and wish to ensure I am submitting my work on the correct date. I would appreciate it if you could verify the due date for me.
+
+Thank you for your time and assistance.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN05|1","2026-11-17T19:40:29.801Z","gemma3:4b","EN05","1","English","English","academic","concise","false","ok","42","3532.0866000000096","924.8018999999913","3530.1489","26.1713","391","52","19.933391804615958","stop","2","[]","[]","true","true","[]","Subject: Request for Feedback – Section 2
+
+Dear Robin Bell,
+
+I am writing to request your comments on Section 2 of the document. I would appreciate receiving them by Monday. I previously submitted the file yesterday.
+
+Sincerely,
+
+Alex Lane","Subject: Request for Feedback – Section 2
+
+Dear Robin Bell,
+
+I am writing to request your comments on Section 2 of the document. I would appreciate receiving them by Monday. I previously submitted the file yesterday.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN06|1","2026-11-17T19:40:33.337Z","gemma3:4b","EN06","1","English","English","work","warm","false","ok","42","3786.057300000015","729.2762999999977","3783.7224","33.9109","399","75","24.536136167049865","stop","2","[]","[]","true","true","[]","Subject: Report Distribution and Support Information
+
+Dear Anne-Marie O’Neil,
+
+I’m sending the report to support@example.com as requested. For any questions regarding the report, you can reach the support team at 5550-1234. Please refrain from sharing this number directly with the client.
+
+Sincerely,
+
+Alex Lane","Subject: Report Distribution and Support Information
+
+Dear Anne-Marie O'Neil,
+
+I’m sending the report to support@example.com as requested. For any questions regarding the report, you can reach the support team at 5550-1234. Please refrain from sharing this number directly with the client.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES03|1","2026-11-17T19:40:37.127Z","gemma3:4b","ES03","1","Spanish","Spanish","work","concise","false","ok","42","2633.93710000001","648.4609000000055","2632.0181","30.749","394","60","30.22589321292681","stop","2","[]","[]","true","true","[]","Subject: Propuesta de Precio
+
+Estimado Luis Pérez,
+
+Le escribo en relación a la compra. No acepto el precio de USD 500. Mi propuesta es de USD 450. Por favor, no confirme la compra todavía.
+
+Gracias,
+
+Carlos Paz","Subject: Propuesta de Precio
+
+Estimado Luis Pérez,
+
+Le escribo en relación a la compra. No acepto el precio de USD 500. Mi propuesta es de USD 450. Por favor, no confirme la compra todavía.
+
+Gracias,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES10|1","2026-11-17T19:40:39.763Z","gemma3:4b","ES10","1","Spanish","Spanish","academic","formal","false","ok","42","2855.788899999985","549.6337999999814","2854.7377","32.4223","390","74","32.09033863980329","stop","2","[]","[]","true","true","[]","Subject: Actualización del Ensayo
+
+Estimada Sofía Cruz,
+
+Le escribo para aclarar mi comunicación anterior con respecto al ensayo. Confirmo que entregaré el ensayo el viernes, sin embargo, el anexo estará listo el lunes. Le pido disculpas por cualquier confusión que esto haya podido causar.
+
+Atentamente,
+
+Carlos Paz","Subject: Actualización del Ensayo
+
+Estimada Sofía Cruz,
+
+Le escribo para aclarar mi comunicación anterior con respecto al ensayo. Confirmo que entregaré el ensayo el viernes, sin embargo, el anexo estará listo el lunes. Le pido disculpas por cualquier confusión que esto haya podido causar.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES02|1","2026-11-17T19:40:42.621Z","gemma3:4b","ES02","1","Spanish","Spanish","work","formal","false","ok","42","3853.482000000018","548.2848000000231","3852.488","10.4152","398","88","26.62493007173906","stop","5","[]","[]","true","true","[]","Subject: Confirmación de Reunión y Revisión de Propuesta
+
+Estimada Marta Solís,
+
+Le escribo para confirmar nuestra reunión programada para el martes a las 10:30. El presupuesto asignado para este proyecto es de USD 250.
+
+Le agradecería que revisara la propuesta en https://example.com/propuesta antes del viernes.
+
+Atentamente,
+
+Carlos Paz","Subject: Confirmación de Reunión y Revisión de Propuesta
+
+Estimada Marta Solís,
+
+Le escribo para confirmar nuestra reunión programada para el martes a las 10:30. El presupuesto asignado para este proyecto es de USD 250.
+
+Le agradecería que revisara la propuesta en https://example.com/propuesta antes del viernes.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN03|1","2026-11-17T19:40:46.477Z","gemma3:4b","EN03","1","English","English","work","concise","false","ok","42","2830.7293000000063","595.1026000000129","2830.0026","21.758","390","66","29.518327974564144","stop","2","[""USD 500""]","[""USD 500""]","false","false","[""Check original detail: 500""]","Subject: Regarding Order Proposal
+
+Dear Sam Walker,
+
+I am writing to respectfully revise my offer for the order. My proposed price is USD 450.
+
+I would appreciate it if you could refrain from confirming the order until we finalize the pricing.
+
+Thank you for your understanding.
+
+Sincerely,
+
+Alex Lane","Subject: Regarding Order Proposal
+
+Dear Sam Walker,
+
+I am writing to respectfully revise my offer for the order. My proposed price is USD 450.
+
+I would appreciate it if you could refrain from confirming the order until we finalize the pricing.
+
+Thank you for your understanding.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES05|1","2026-11-17T19:40:49.309Z","gemma3:4b","ES05","1","Spanish","Spanish","academic","concise","false","ok","42","2944.5657000000065","545.8770000000077","2942.8638","7.4796","394","72","30.01388142015682","stop","2","[]","[]","true","true","[""Fill in [Nombre del Trabajo]"",""Fill in [Nombre del Trabajo]""]","Subject: Comentarios Sección 2 - Trabajo [Nombre del Trabajo]
+
+Estimado Pedro Mora,
+
+Le escribo para solicitarle amablemente que, si fuera posible, me proporcionara sus comentarios sobre la sección 2 del trabajo [Nombre del Trabajo] antes del lunes. Ya envié el archivo ayer.
+
+Atentamente,
+Carlos Paz","Subject: Comentarios Sección 2 - Trabajo [Nombre del Trabajo]
+
+Estimado Pedro Mora,
+
+Le escribo para solicitarle amablemente que, si fuera posible, me proporcionara sus comentarios sobre la sección 2 del trabajo [Nombre del Trabajo] antes del lunes. Ya envié el archivo ayer.
+
+Atentamente,
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES04|1","2026-11-17T19:40:52.256Z","gemma3:4b","ES04","1","Spanish","Spanish","academic","formal","false","ok","42","2652.6048999999766","513.8220999999903","2652.3527","8.8457","381","61","28.52209269867157","stop","0","[]","[]","true","true","[]","Subject: Confirmación de Fecha de Entrega del Proyecto
+
+Estimada Elena Ríos,
+
+Espero que se encuentre bien.
+
+Le agradecería enormemente si pudiera confirmarme la fecha de entrega del proyecto. No deseo inventar una fecha en el formulario.
+
+Atentamente,
+
+Carlos Paz","Subject: Confirmación de Fecha de Entrega del Proyecto
+
+Estimada Elena Ríos,
+
+Espero que se encuentre bien.
+
+Le agradecería enormemente si pudiera confirmarme la fecha de entrega del proyecto. No deseo inventar una fecha en el formulario.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN07|1","2026-11-17T19:40:54.910Z","gemma3:4b","EN07","1","English","English","work","formal","true","ok","42","5202.028099999996","661.5702000000165","5200.8804","12.0349","391","110","24.225654483585025","stop","2","[]","[]","true","true","[]","Subject: Clarification Regarding Client Quote
+
+Dear Jamie Fox,
+
+I am writing to you regarding a recent communication from the client concerning the quote. They have requested a revision to USD 250, proposing instead a total of USD 25.
+
+Please note that I did not authorize this change and would appreciate it if you could contact the client to seek clarification on their request. It is important to maintain the original offer of USD 250.
+
+Thank you for your attention to this matter.
+
+Sincerely,
+
+Alex Lane","Subject: Clarification Regarding Client Quote
+
+Dear Jamie Fox,
+
+I am writing to you regarding a recent communication from the client concerning the quote. They have requested a revision to USD 250, proposing instead a total of USD 25.
+
+Please note that I did not authorize this change and would appreciate it if you could contact the client to seek clarification on their request. It is important to maintain the original offer of USD 250.
+
+Thank you for your attention to this matter.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN08|1","2026-11-17T19:41:00.234Z","gemma3:4b","EN08","1","English","English","work","concise","false","ok","42","2780.852099999989","504.38240000000224","2778.263","8.38","407","82","36.03031995363513","stop","3","[""2026-12-03""]","[""2026-12-03""]","false","false","[""Check original detail: 2026-12-03""]","Subject: Order Confirmation Request
+
+Dear Jordan Stone,
+
+Could you please confirm the order for 12 boxes with delivery scheduled for December 3, 2026? I also request a 5% discount.
+
+If the order is out of stock, please let me know. I would like to be notified before any replacements are made without my explicit permission.
+
+Sincerely,
+
+Alex Lane","Subject: Order Confirmation Request
+
+Dear Jordan Stone,
+
+Could you please confirm the order for 12 boxes with delivery scheduled for December 3, 2026? I also request a 5% discount.
+
+If the order is out of stock, please let me know. I would like to be notified before any replacements are made without my explicit permission.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES01|1","2026-11-17T19:41:03.017Z","gemma3:4b","ES01","1","Spanish","Spanish","academic","warm","false","ok","42","5005.7860999999975","550.8257000000158","5004.2938","23.5863","386","102","22.896702201450573","stop","2","[]","[]","true","true","[]","Subject: Consulta sobre Asistencia y Materiales del Curso
+
+Estimada Ana Ruiz,
+
+Espero que se encuentre bien.
+
+Le escribo para informarle que no podré asistir a la clase del jueves debido a que me encuentro indispuesto. Le agradecería enormemente si pudiera compartir conmigo los apuntes de la clase.
+
+Además, quería confirmar si el plazo para entregar el ensayo sigue siendo el viernes.
+
+Muchas gracias por su comprensión y colaboración.
+
+Atentamente,
+
+Carlos Paz","Subject: Consulta sobre Asistencia y Materiales del Curso
+
+Estimada Ana Ruiz,
+
+Espero que se encuentre bien.
+
+Le escribo para informarle que no podré asistir a la clase del jueves debido a que me encuentro indispuesto. Le agradecería enormemente si pudiera compartir conmigo los apuntes de la clase.
+
+Además, quería confirmar si el plazo para entregar el ensayo sigue siendo el viernes.
+
+Muchas gracias por su comprensión y colaboración.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN09|1","2026-11-17T19:41:08.027Z","gemma3:4b","EN09","1","English","English","work","warm","false","ok","42","2867.667300000001","468.0595999999787","2865.7657","12.4717","387","88","36.67400146696006","stop","0","[]","[]","true","true","[]","Subject: Inquiry Regarding Job Opportunity
+
+Dear [Recipient Name],
+
+Thank you for reaching out and for your interest in the job opportunity. I am very keen to learn more about the role.
+
+To help me assess if this position aligns with my career goals, could you please provide me with details regarding the standard working hours and the salary range offered?
+
+Thank you for your time and consideration.
+
+Sincerely,
+
+[Sender Name]","Subject: Inquiry Regarding Job Opportunity
+
+Hello,
+
+Thank you for reaching out and for your interest in the job opportunity. I am very keen to learn more about the role.
+
+To help me assess if this position aligns with my career goals, could you please provide me with details regarding the standard working hours and the salary range offered?
+
+Thank you for your time and consideration.
+
+Sincerely,",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN10|1","2026-11-17T19:41:10.899Z","gemma3:4b","EN10","1","English","English","work","formal","false","ok","42","4122.564500000008","587.5685999999987","4121.681","11.4778","392","97","27.43718581593665","stop","3","[]","[]","true","true","[]","Subject: Regarding Shipment of Order PO-5012
+
+Dear Casey Brooks,
+
+I am writing to update you on the shipment of order PO-5012. We are currently unable to proceed with shipping until the purchase order has been approved.
+
+Could you please check on the status of approval by Wednesday? The total amount for this order is USD 1,250.
+
+Thank you for your attention to this matter.
+
+Sincerely,
+
+Alex Lane","Subject: Regarding Shipment of Order PO-5012
+
+Dear Casey Brooks,
+
+I am writing to update you on the shipment of order PO-5012. We are currently unable to proceed with shipping until the purchase order has been approved.
+
+Could you please check on the status of approval by Wednesday? The total amount for this order is USD 1,250.
+
+Thank you for your attention to this matter.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES07|1","2026-11-17T19:41:15.024Z","gemma3:4b","ES07","1","Spanish","Spanish","work","formal","true","ok","42","117164.11799999999","2659.9151999999885","117162.0435","7.3322","394","136","1.187573112698549","stop","2","[]","[]","true","true","[""Fill in [Nombre del Proyecto]"",""Fill in [Nombre del Proyecto]""]","Subject: Confirmación de Presupuesto - Proyecto [Nombre del Proyecto]
+
+Estimada Eva Soto,
+
+Espero que se encuentre bien.
+
+Le escribo en relación con la solicitud del cliente para modificar el presupuesto del proyecto [Nombre del Proyecto]. El cliente ha solicitado ajustar el presupuesto de USD 250 a USD 25, sin embargo, no he autorizado este cambio.
+
+Le agradecería que, por favor, solicite al cliente una aclaración sobre su solicitud y que se mantenga firme en la propuesta original, que incluye el presupuesto de USD 250.
+
+Agradezco su colaboración.
+
+Atentamente,
+
+Carlos Paz","Subject: Confirmación de Presupuesto - Proyecto [Nombre del Proyecto]
+
+Estimada Eva Soto,
+
+Espero que se encuentre bien.
+
+Le escribo en relación con la solicitud del cliente para modificar el presupuesto del proyecto [Nombre del Proyecto]. El cliente ha solicitado ajustar el presupuesto de USD 250 a USD 25, sin embargo, no he autorizado este cambio.
+
+Le agradecería que, por favor, solicite al cliente una aclaración sobre su solicitud y que se mantenga firme en la propuesta original, que incluye el presupuesto de USD 250.
+
+Agradezco su colaboración.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES06|1","2026-11-17T19:43:12.193Z","gemma3:4b","ES06","1","Spanish","Spanish","work","warm","false","ok","42","1943.3141000000178","533.102899999998","1903.9814","211.6703","400","85","59.55283527545639","stop","2","[]","[]","true","true","[]","Subject: Informe – Soporte Técnico
+
+Estimada María-José Núñez,
+
+Le envío adjunto el informe correspondiente. Por favor, lo remita a soporte@example.com. En caso de que surjan dudas, puede contactar al número 5550-1234. Le agradecería que no compartiera este número con el cliente.
+
+Atentamente,
+
+Álvaro Díaz","Subject: Informe – Soporte Técnico
+
+Estimada María-José Núñez,
+
+Le envío adjunto el informe correspondiente. Por favor, lo remita a soporte@example.com. En caso de que surjan dudas, puede contactar al número 5550-1234. Le agradecería que no compartiera este número con el cliente.
+
+Atentamente,
+
+Álvaro Díaz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES04|2","2026-11-17T19:43:21.274Z","gemma3:4b","ES04","2","Spanish","Spanish","academic","formal","false","ok","43","1590.5152000000235","176.48000000003958","1587.6123","19.9754","381","84","59.457198249410204","stop","0","[]","[]","true","true","[]","Subject: Confirmación de Fecha de Entrega – Proyecto
+
+Estimada Elena Ríos:
+
+Espero que se encuentre bien.
+
+Le escribo para solicitar amablemente su confirmación sobre la fecha de entrega del proyecto. No tengo registro de la fecha de entrega y no deseo proporcionar una fecha inventada en el formulario.
+
+Agradezco de antemano su colaboración.
+
+Atentamente,
+
+Carlos Paz","Subject: Confirmación de Fecha de Entrega – Proyecto
+
+Estimada Elena Ríos:
+
+Espero que se encuentre bien.
+
+Le escribo para solicitar amablemente su confirmación sobre la fecha de entrega del proyecto. No tengo registro de la fecha de entrega y no deseo proporcionar una fecha inventada en el formulario.
+
+Agradezco de antemano su colaboración.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES02|2","2026-11-17T19:43:22.872Z","gemma3:4b","ES02","2","Spanish","Spanish","work","formal","false","ok","43","1728.4049999999697","226.52879999997094","1724.8115","35.4521","398","88","58.590381989316576","stop","5","[]","[]","true","true","[]","Subject: Confirmación de Reunión y Revisión de Propuesta
+
+Estimada Marta Solís,
+
+Le escribo para confirmar nuestra reunión programada para el martes a las 10:30. El presupuesto asignado para este proyecto es de USD 250.
+
+Le agradecería que revisara la propuesta en https://example.com/propuesta antes del viernes.
+
+Atentamente,
+
+Carlos Paz","Subject: Confirmación de Reunión y Revisión de Propuesta
+
+Estimada Marta Solís,
+
+Le escribo para confirmar nuestra reunión programada para el martes a las 10:30. El presupuesto asignado para este proyecto es de USD 250.
+
+Le agradecería que revisara la propuesta en https://example.com/propuesta antes del viernes.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN06|2","2026-11-17T19:43:24.607Z","gemma3:4b","EN06","2","English","English","work","warm","false","ok","43","1749.3089000000036","214.38349999999627","1745.0755","25.4452","399","89","57.944519099555194","stop","2","[]","[]","true","true","[]","Subject: Report Distribution and Support Information
+
+Dear Anne-Marie O’Neil,
+
+I’m sending the report to support@example.com for your review. 
+
+For any questions regarding the report, please contact 5550-1234. Please note that I would prefer to keep this number confidential and not share it directly with the client.
+
+Thank you for your assistance.
+
+Sincerely,
+
+Alex Lane","Subject: Report Distribution and Support Information
+
+Dear Anne-Marie O'Neil,
+
+I’m sending the report to support@example.com for your review. 
+
+For any questions regarding the report, please contact 5550-1234. Please note that I would prefer to keep this number confidential and not share it directly with the client.
+
+Thank you for your assistance.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN10|2","2026-11-17T19:43:26.363Z","gemma3:4b","EN10","2","English","English","work","formal","false","ok","43","1885.875699999975","206.4930999999633","1884.4208","20.8628","392","97","57.76962782661727","stop","3","[]","[]","true","true","[]","Subject: Regarding Shipment of Order PO-5012
+
+Dear Casey Brooks,
+
+I am writing to update you on the shipment of order PO-5012. We are currently unable to proceed with shipping until the purchase order has been approved.
+
+Could you please check on the status of approval by Wednesday? The total amount for this order is USD 1,250.
+
+Thank you for your attention to this matter.
+
+Sincerely,
+
+Alex Lane","Subject: Regarding Shipment of Order PO-5012
+
+Dear Casey Brooks,
+
+I am writing to update you on the shipment of order PO-5012. We are currently unable to proceed with shipping until the purchase order has been approved.
+
+Could you please check on the status of approval by Wednesday? The total amount for this order is USD 1,250.
+
+Thank you for your attention to this matter.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES08|2","2026-11-17T19:43:28.255Z","gemma3:4b","ES08","2","Spanish","Spanish","work","concise","false","ok","43","1961.5353999999934","217.18839999998454","1959.7689","21.5149","410","101","57.861816815216855","stop","3","[]","[]","true","true","[]","Subject: Confirmación de Pedido
+
+Estimada Diana León,
+
+Le escribo para confirmar los siguientes puntos:
+
+*   Confirmación de 12 cajas.
+*   Entrega programada para el 03/12/2026.
+*   Descuento del 5%.
+
+Si no hay stock disponible, le agradecería que me informara. Por favor, no sustituya productos sin mi autorización previa.
+
+Atentamente,
+
+Carlos Paz","Subject: Confirmación de Pedido
+
+Estimada Diana León,
+
+Le escribo para confirmar los siguientes puntos:
+
+*   Confirmación de 12 cajas.
+*   Entrega programada para el 03/12/2026.
+*   Descuento del 5%.
+
+Si no hay stock disponible, le agradecería que me informara. Por favor, no sustituya productos sin mi autorización previa.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES10|2","2026-11-17T19:43:30.224Z","gemma3:4b","ES10","2","Spanish","Spanish","academic","formal","false","ok","43","1619.6288000000059","201.1893000000273","1617.3658","19.7903","390","81","57.09870886425733","stop","2","[]","[]","true","true","[]","Subject: Actualización sobre la Entrega del Ensayo
+
+Estimada Sofía Cruz,
+
+Le escribo para aclarar mi comunicación anterior sobre la entrega del ensayo. Confirmo que sí entregaré el ensayo el viernes, sin embargo, el anexo estará listo el lunes.
+
+Le pido disculpas por cualquier confusión que esto haya podido causar.
+
+Atentamente,
+
+Carlos Paz","Subject: Actualización sobre la Entrega del Ensayo
+
+Estimada Sofía Cruz,
+
+Le escribo para aclarar mi comunicación anterior sobre la entrega del ensayo. Confirmo que sí entregaré el ensayo el viernes, sin embargo, el anexo estará listo el lunes.
+
+Le pido disculpas por cualquier confusión que esto haya podido causar.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES01|2","2026-11-17T19:43:31.852Z","gemma3:4b","ES01","2","Spanish","Spanish","academic","warm","false","ok","43","1945.6031000000075","214.47320000000764","1943.8374","21.8829","386","100","57.79094126995594","stop","2","[]","[]","true","true","[]","Subject: Consulta sobre apuntes y entrega de ensayo
+
+Estimada Ana Ruiz,
+
+Espero que se encuentre bien.
+
+Le escribo para informarle que no podré asistir a la clase del jueves debido a que me encuentro indispuesto. Le agradecería enormemente si pudiera compartir conmigo los apuntes de la sesión.
+
+Además, quería confirmar si la entrega del ensayo sigue prevista para el viernes.
+
+Muchas gracias por su comprensión y colaboración.
+
+Atentamente,
+
+Carlos Paz","Subject: Consulta sobre apuntes y entrega de ensayo
+
+Estimada Ana Ruiz,
+
+Espero que se encuentre bien.
+
+Le escribo para informarle que no podré asistir a la clase del jueves debido a que me encuentro indispuesto. Le agradecería enormemente si pudiera compartir conmigo los apuntes de la sesión.
+
+Además, quería confirmar si la entrega del ensayo sigue prevista para el viernes.
+
+Muchas gracias por su comprensión y colaboración.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN04|2","2026-11-17T19:43:33.801Z","gemma3:4b","EN04","2","English","English","academic","formal","false","ok","43","1469.6038999999873","193.8581000000122","1468.1733","25.2672","379","74","57.991912479232624","stop","0","[]","[]","true","true","[""Fill in [Project Name]""]","Subject: Confirmation of Project Deadline
+
+Dear Taylor Clark,
+
+I am writing to request confirmation regarding the deadline for the [Project Name] project. I had unfortunately overlooked the deadline and would like to avoid submitting an incorrect date on the form.
+
+Could you please provide me with the official deadline date?
+
+Thank you for your assistance.
+
+Sincerely,
+
+Alex Lane","Subject: Confirmation of Project Deadline
+
+Dear Taylor Clark,
+
+I am writing to request confirmation regarding the deadline for the [Project Name] project. I had unfortunately overlooked the deadline and would like to avoid submitting an incorrect date on the form.
+
+Could you please provide me with the official deadline date?
+
+Thank you for your assistance.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN09|2","2026-11-17T19:43:35.277Z","gemma3:4b","EN09","2","English","English","work","warm","false","ok","43","1983.6925000000047","212.1198999999906","1981.9277","21.2028","387","102","57.304079039179136","stop","0","[]","[]","true","true","[""Fill in [Job Title]"",""Fill in [Job Title]""]","Subject: Inquiry Regarding [Job Title] Position
+
+Dear [Recipient Name],
+
+Thank you for reaching out and providing me with information about the [Job Title] position. I am very interested in learning more about this opportunity.
+
+To help me assess if this role aligns with my career goals, I would appreciate it if you could provide me with details regarding the standard working hours and the salary range offered for this position.
+
+Thank you for your time and consideration.
+
+Sincerely,
+
+[Sender Name]","Subject: Inquiry Regarding [Job Title] Position
+
+Hello,
+
+Thank you for reaching out and providing me with information about the [Job Title] position. I am very interested in learning more about this opportunity.
+
+To help me assess if this role aligns with my career goals, I would appreciate it if you could provide me with details regarding the standard working hours and the salary range offered for this position.
+
+Thank you for your time and consideration.
+
+Sincerely,",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN07|2","2026-11-17T19:43:37.265Z","gemma3:4b","EN07","2","English","English","work","formal","true","ok","43","2061.0042999999714","231.84089999995194","2059.6998","27.7617","391","106","57.94065783417821","stop","2","[]","[]","true","true","[]","Subject: Clarification Regarding Client Quote
+
+Dear Jamie Fox,
+
+I am writing to you regarding a recent communication from the client concerning the quote. They have requested a revision to USD 250, proposing instead a total of USD 25.
+
+Please note that I did not authorize this change, and I would appreciate it if you could contact the client to clarify their request and reaffirm the original offer of USD 250.
+
+Thank you for your attention to this matter.
+
+Sincerely,
+
+Alex Lane","Subject: Clarification Regarding Client Quote
+
+Dear Jamie Fox,
+
+I am writing to you regarding a recent communication from the client concerning the quote. They have requested a revision to USD 250, proposing instead a total of USD 25.
+
+Please note that I did not authorize this change, and I would appreciate it if you could contact the client to clarify their request and reaffirm the original offer of USD 250.
+
+Thank you for your attention to this matter.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES05|2","2026-11-17T19:43:39.328Z","gemma3:4b","ES05","2","Spanish","Spanish","academic","concise","false","ok","43","1253.6051999999909","204.6923999999999","1252.6447","21.8011","394","62","59.11365744779644","stop","2","[]","[]","true","true","[]","Subject: Solicitud de comentarios – Sección 2
+
+Estimado Pedro Mora,
+
+Le escribo para solicitarle que, si fuera posible, me proporcionara sus comentarios sobre la sección 2 del trabajo antes del lunes. Ya envié el archivo ayer.
+
+Atentamente,
+Carlos Paz","Subject: Solicitud de comentarios – Sección 2
+
+Estimado Pedro Mora,
+
+Le escribo para solicitarle que, si fuera posible, me proporcionara sus comentarios sobre la sección 2 del trabajo antes del lunes. Ya envié el archivo ayer.
+
+Atentamente,
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN01|2","2026-11-17T19:43:40.585Z","gemma3:4b","EN01","2","English","English","academic","warm","false","ok","43","1545.1773000000394","179.44920000003185","1544.1862","22.3795","382","81","59.3133274117641","stop","2","[]","[]","true","true","[]","Subject: Absence from Thursday Class - Request for Notes
+
+Dear Daniel Reed,
+
+I am writing to inform you that I will be unable to attend class on Thursday due to illness. 
+
+I was hoping you could send me the notes from the session. Also, I wanted to confirm whether the essay is still due on Friday. 
+
+Thank you for your understanding.
+
+Sincerely,
+
+Alex Lane","Subject: Absence from Thursday Class - Request for Notes
+
+Dear Daniel Reed,
+
+I am writing to inform you that I will be unable to attend class on Thursday due to illness. 
+
+I was hoping you could send me the notes from the session. Also, I wanted to confirm whether the essay is still due on Friday. 
+
+Thank you for your understanding.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN05|2","2026-11-17T19:43:42.132Z","gemma3:4b","EN05","2","English","English","academic","concise","false","ok","43","1129.361900000018","195.30480000004172","1127.8106","21.0918","391","56","59.91304050121538","stop","2","[]","[]","true","true","[]","Subject: Request for Feedback – Section 2
+
+Dear Robin Bell,
+
+I am writing to request your comments on Section 2 of my work. I would appreciate it if you could provide feedback before Monday. I previously sent the file yesterday.
+
+Sincerely,
+
+Alex Lane","Subject: Request for Feedback – Section 2
+
+Dear Robin Bell,
+
+I am writing to request your comments on Section 2 of my work. I would appreciate it if you could provide feedback before Monday. I previously sent the file yesterday.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN03|2","2026-11-17T19:43:43.263Z","gemma3:4b","EN03","2","English","English","work","concise","false","ok","43","1291.934899999993","197.62300000002142","1290.8348","20.8481","390","66","60.28839777188698","stop","2","[""USD 500""]","[""USD 500""]","false","false","[""Check original detail: 500""]","Subject: Regarding Order Proposal
+
+Dear Sam Walker,
+
+I am writing to respectfully revise my offer for the order. My proposed price is USD 450.
+
+I would appreciate it if you could refrain from confirming the order until we finalize the details.
+
+Thank you for your understanding.
+
+Sincerely,
+
+Alex Lane","Subject: Regarding Order Proposal
+
+Dear Sam Walker,
+
+I am writing to respectfully revise my offer for the order. My proposed price is USD 450.
+
+I would appreciate it if you could refrain from confirming the order until we finalize the details.
+
+Thank you for your understanding.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES03|2","2026-11-17T19:43:44.556Z","gemma3:4b","ES03","2","Spanish","Spanish","work","concise","false","ok","43","1184.899999999965","196.12729999999283","1182.8322","20.2244","394","60","60.684521401407885","stop","2","[]","[]","true","true","[]","Subject: Propuesta de Precio
+
+Estimado Luis Pérez,
+
+Le escribo en relación a la compra. No acepto el precio de USD 500. Mi propuesta es de USD 450. Por favor, no confirme la compra todavía.
+
+Gracias,
+
+Carlos Paz","Subject: Propuesta de Precio
+
+Estimado Luis Pérez,
+
+Le escribo en relación a la compra. No acepto el precio de USD 500. Mi propuesta es de USD 450. Por favor, no confirme la compra todavía.
+
+Gracias,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN02|2","2026-11-17T19:43:45.742Z","gemma3:4b","EN02","2","English","English","work","formal","false","ok","43","2192.160799999954","195.6770999999717","2190.5162","23.0335","395","120","60.114337469867685","stop","6","[]","[]","true","true","[""Check added detail: https://example.com/proposal.""]","Subject: Meeting Scheduling and Proposal Review
+
+Dear Morgan Lee,
+
+I hope this email finds you well.
+
+I am writing to request a change to our meeting. Would it be possible to reschedule from Tuesday at 10:00 to Thursday at 10:00?
+
+I have also attached the proposal for your review, which can be found at https://example.com/proposal.
+
+Please let me know your availability by Friday. The budget for this project is USD 250.
+
+Thank you for your time and consideration.
+
+Sincerely,
+
+Alex Lane","Subject: Meeting Scheduling and Proposal Review
+
+Dear Morgan Lee,
+
+I hope this email finds you well.
+
+I am writing to request a change to our meeting. Would it be possible to reschedule from Tuesday at 10:00 to Thursday at 10:00?
+
+I have also attached the proposal for your review, which can be found at https://example.com/proposal.
+
+Please let me know your availability by Friday. The budget for this project is USD 250.
+
+Thank you for your time and consideration.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES07|2","2026-11-17T19:43:47.937Z","gemma3:4b","ES07","2","Spanish","Spanish","work","formal","true","ok","43","2325.326000000001","196.68400000000838","2324.0452","22.1582","394","127","59.66542261911473","stop","2","[]","[]","true","true","[""Fill in [Nombre del Proyecto]"",""Fill in [Nombre del Proyecto]""]","Subject: Confirmación de Presupuesto - Proyecto [Nombre del Proyecto]
+
+Estimada Eva Soto,
+
+Le escribo en relación con la solicitud del cliente para modificar el presupuesto del proyecto [Nombre del Proyecto]. El cliente ha solicitado cambiar el presupuesto de USD 250 a USD 25.
+
+Quisiera informarle que no he autorizado este cambio y, por lo tanto, le solicito que, por favor, pida aclaración al cliente y conserve la propuesta original, que incluye el presupuesto de USD 250.
+
+Agradezco su colaboración.
+
+Atentamente,
+
+Carlos Paz","Subject: Confirmación de Presupuesto - Proyecto [Nombre del Proyecto]
+
+Estimada Eva Soto,
+
+Le escribo en relación con la solicitud del cliente para modificar el presupuesto del proyecto [Nombre del Proyecto]. El cliente ha solicitado cambiar el presupuesto de USD 250 a USD 25.
+
+Quisiera informarle que no he autorizado este cambio y, por lo tanto, le solicito que, por favor, pida aclaración al cliente y conserve la propuesta original, que incluye el presupuesto de USD 250.
+
+Agradezco su colaboración.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|EN08|2","2026-11-17T19:43:50.265Z","gemma3:4b","EN08","2","English","English","work","concise","false","ok","43","1793.3702000000048","199.10080000001471","1792.219","19.8133","407","95","59.579469291173645","stop","3","[""2026-12-03"",""5%""]","[""2026-12-03"",""5%""]","false","false","[""Check original detail: 2026-12-03"",""Check original detail: 5%""]","Subject: Order Confirmation Request
+
+Dear Jordan Stone,
+
+Could you please confirm the order for 12 boxes with delivery scheduled for December 3, 2026?
+
+Also, please let me know if the items are currently in stock. I would appreciate it if you could inform me if there are any issues with fulfilling the order, and I do not want anything replaced without prior approval.
+
+Thank you for your assistance.
+
+Sincerely,
+
+Alex Lane","Subject: Order Confirmation Request
+
+Dear Jordan Stone,
+
+Could you please confirm the order for 12 boxes with delivery scheduled for December 3, 2026?
+
+Also, please let me know if the items are currently in stock. I would appreciate it if you could inform me if there are any issues with fulfilling the order, and I do not want anything replaced without prior approval.
+
+Thank you for your assistance.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES09|2","2026-11-17T19:43:52.060Z","gemma3:4b","ES09","2","Spanish","Spanish","work","warm","false","ok","43","1696.0475999999908","186.88409999996657","1694.8387","12.2964","384","90","59.63068727679903","stop","0","[]","[]","true","true","[]","Subject: Consulta sobre la Vacante
+
+Estimado/a,
+
+Le escribo en relación con la vacante que he visto publicada. Estoy muy interesado/a en esta oportunidad y me gustaría obtener más información sobre el horario de trabajo y el salario ofrecido.
+
+Agradecería enormemente que me pudiera proporcionar estos detalles.
+
+Gracias de antemano por su tiempo y atención.
+
+Atentamente,
+
+[Sender Name]","Subject: Consulta sobre la Vacante
+
+Estimado/a,
+
+Le escribo en relación con la vacante que he visto publicada. Estoy muy interesado/a en esta oportunidad y me gustaría obtener más información sobre el horario de trabajo y el salario ofrecido.
+
+Agradecería enormemente que me pudiera proporcionar estos detalles.
+
+Gracias de antemano por su tiempo y atención.
+
+Atentamente,",""
+"2026-11-17T19-38-15-211Z","gemma3:4b|ES06|2","2026-11-17T19:43:53.765Z","gemma3:4b","ES06","2","Spanish","Spanish","work","warm","false","ok","43","1673.9437000000034","197.95940000005066","1671.5897","21.0129","400","87","58.957868842460506","stop","2","[]","[]","true","true","[]","Subject: Informe – Soporte Técnico
+
+Estimada María-José Núñez,
+
+Le envío adjunto el informe correspondiente. Por favor, envíe el informe a soporte@example.com. En caso de que surjan dudas, puede contactar al número 5550-1234. Le ruego no comparta este número de teléfono con el cliente.
+
+Atentamente,
+
+Álvaro Díaz","Subject: Informe – Soporte Técnico
+
+Estimada María-José Núñez,
+
+Le envío adjunto el informe correspondiente. Por favor, envíe el informe a soporte@example.com. En caso de que surjan dudas, puede contactar al número 5550-1234. Le ruego no comparta este número de teléfono con el cliente.
+
+Atentamente,
+
+Álvaro Díaz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES04|2","2026-11-17T19:44:00.496Z","qwen3.5:4b-q4_K_M","ES04","2","Spanish","Spanish","academic","formal","false","ok","43","1648.3354999999865","212.5158999999985","1647.1345","22.541","380","78","54.31815396271825","stop","0","[]","[]","true","true","[]","Subject: Consulta sobre la fecha de entrega del proyecto
+
+Estimada Elena Ríos:
+
+Le escribo para consultarle la fecha de entrega del proyecto, ya que no recuerdo cuál es. Le agradecería mucho que me pudiera confirmar dicha fecha para evitar introducir una información incorrecta en el formulario.
+
+Quedo atento a sus indicaciones.
+
+Atentamente,
+
+Carlos Paz","Subject: Consulta sobre la fecha de entrega del proyecto
+
+Estimada Elena Ríos:
+
+Le escribo para consultarle la fecha de entrega del proyecto, ya que no recuerdo cuál es. Le agradecería mucho que me pudiera confirmar dicha fecha para evitar introducir una información incorrecta en el formulario.
+
+Quedo atento a sus indicaciones.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES02|2","2026-11-17T19:44:02.148Z","qwen3.5:4b-q4_K_M","ES02","2","Spanish","Spanish","work","formal","false","ok","43","1754.2580999999773","270.41279999999097","1746.5627","32.8613","394","80","53.918710803624684","stop","5","[]","[]","true","true","[]","Subject: Confirmación de reunión y revisión de propuesta
+
+Estimada Marta Solís,
+
+Por favor, confirme la reunión programada para el martes a las 10:30. El presupuesto establecido es de USD 250. Asimismo, le solicito revisar el documento disponible en https://example.com/propuesta antes del viernes.
+
+Atentamente,
+Carlos Paz","Subject: Confirmación de reunión y revisión de propuesta
+
+Estimada Marta Solís,
+
+Por favor, confirme la reunión programada para el martes a las 10:30. El presupuesto establecido es de USD 250. Asimismo, le solicito revisar el documento disponible en https://example.com/propuesta antes del viernes.
+
+Atentamente,
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN06|2","2026-11-17T19:44:03.904Z","qwen3.5:4b-q4_K_M","EN06","2","English","English","work","warm","false","ok","43","1363.7451","227.382099999988","1362.8432","19.5003","394","62","54.59140097384016","stop","2","[]","[]","true","true","[]","Subject: Report Submission Instructions
+
+Dear Anne-Marie O'Neil,
+
+Please send the report to support@example.com. For any questions, you may call 5550-1234. Kindly ensure this number is not shared with the client.
+
+Best regards,
+
+Alex Lane","Subject: Report Submission Instructions
+
+Dear Anne-Marie O'Neil,
+
+Please send the report to support@example.com. For any questions, you may call 5550-1234. Kindly ensure this number is not shared with the client.
+
+Best regards,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN10|2","2026-11-17T19:44:05.270Z","qwen3.5:4b-q4_K_M","EN10","2","English","English","work","formal","false","ok","43","1996.135500000033","228.76030000002356","1994.625","21.2614","389","96","54.33106293631098","stop","3","[]","[]","true","true","[]","Subject: Approval Required for Purchase Order PO-5012 to Proceed with Shipment
+
+Dear Casey Brooks,
+
+We are unable to proceed with the shipment until Purchase Order PO-5012 has been approved. As of now, this order remains unapproved.
+
+Could you please review and approve it by Wednesday? The total value for this order is USD 1,250.
+
+Thank you for your assistance.
+
+Sincerely,
+
+Alex Lane","Subject: Approval Required for Purchase Order PO-5012 to Proceed with Shipment
+
+Dear Casey Brooks,
+
+We are unable to proceed with the shipment until Purchase Order PO-5012 has been approved. As of now, this order remains unapproved.
+
+Could you please review and approve it by Wednesday? The total value for this order is USD 1,250.
+
+Thank you for your assistance.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES08|2","2026-11-17T19:44:07.269Z","qwen3.5:4b-q4_K_M","ES08","2","Spanish","Spanish","work","concise","false","ok","43","2251.2583999999915","226.4892000000109","2250.3423","13.6011","410","110","54.31599862926171","stop","3","[]","[]","true","true","[]","Subject: Confirmación de pedido: 12 cajas, entrega 03/12/2026 y descuento del 5%
+
+Estimada Diana León:
+
+Le solicito confirmar la recepción de 12 cajas con entrega programada para el 03/12/2026, aplicando un descuento del 5%. Por favor, avíseme inmediatamente si no hay stock disponible. No se deben sustituir productos sin mi autorización expresa.
+
+Atentamente,
+Carlos Paz","Subject: Confirmación de pedido: 12 cajas, entrega 03/12/2026 y descuento del 5%
+
+Estimada Diana León:
+
+Le solicito confirmar la recepción de 12 cajas con entrega programada para el 03/12/2026, aplicando un descuento del 5%. Por favor, avíseme inmediatamente si no hay stock disponible. No se deben sustituir productos sin mi autorización expresa.
+
+Atentamente,
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES10|2","2026-11-17T19:44:09.522Z","qwen3.5:4b-q4_K_M","ES10","2","Spanish","Spanish","academic","formal","false","ok","43","1995.3580000000075","218.84340000001248","1994.21","8.393","390","96","54.01159899088329","stop","2","[]","[]","true","true","[]","Subject: Entrega del ensayo y del anexo
+
+Estimada Sofía Cruz,
+
+Le escribo para aclarar un punto importante respecto a los plazos de entrega. A pesar de lo que podría haberse interpretado anteriormente, sí entregaré el ensayo este viernes; sin embargo, el anexo quedará listo únicamente para el lunes.
+
+Le pido disculpas por la confusión generada en este asunto.
+
+Atentamente,
+
+Carlos Paz","Subject: Entrega del ensayo y del anexo
+
+Estimada Sofía Cruz,
+
+Le escribo para aclarar un punto importante respecto a los plazos de entrega. A pesar de lo que podría haberse interpretado anteriormente, sí entregaré el ensayo este viernes; sin embargo, el anexo quedará listo únicamente para el lunes.
+
+Le pido disculpas por la confusión generada en este asunto.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES01|2","2026-11-17T19:44:11.521Z","qwen3.5:4b-q4_K_M","ES01","2","Spanish","Spanish","academic","warm","false","ok","43","2101.675799999968","230.3071999999811","2099.9782","19.3843","387","100","53.441441807346806","stop","2","[]","[]","true","true","[]","Subject: Ausencia en clase y consulta sobre el ensayo
+
+Estimada Ana Ruiz,
+
+Espero que se encuentre bien. Le escribo para informarle que no podré asistir a la clase del jueves debido a una enfermedad. ¿Podría compartirme los apuntes de esa sesión?
+
+Adicionalmente, le confirmo que mi ensayo sigue programado para entregarse el viernes.
+
+Muchas gracias por su ayuda.
+
+Atentamente,
+Carlos Paz","Subject: Ausencia en clase y consulta sobre el ensayo
+
+Estimada Ana Ruiz,
+
+Espero que se encuentre bien. Le escribo para informarle que no podré asistir a la clase del jueves debido a una enfermedad. ¿Podría compartirme los apuntes de esa sesión?
+
+Adicionalmente, le confirmo que mi ensayo sigue programado para entregarse el viernes.
+
+Muchas gracias por su ayuda.
+
+Atentamente,
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN04|2","2026-11-17T19:44:13.630Z","qwen3.5:4b-q4_K_M","EN04","2","English","English","academic","formal","false","ok","43","1388.3395000000019","225.15789999999106","1385.2453","20.9616","375","62","53.30160455023762","stop","0","[]","[]","true","true","[]","Subject: Confirmation of Project Deadline
+
+Dear Taylor Clark,
+
+I am writing to request confirmation regarding the deadline for my project. I would appreciate it if you could clarify the specific date so that I may complete the form accurately without guessing.
+
+Thank you for your assistance.
+
+Sincerely,
+
+Alex Lane","Subject: Confirmation of Project Deadline
+
+Dear Taylor Clark,
+
+I am writing to request confirmation regarding the deadline for my project. I would appreciate it if you could clarify the specific date so that I may complete the form accurately without guessing.
+
+Thank you for your assistance.
+
+Sincerely,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN09|2","2026-11-17T19:44:15.025Z","qwen3.5:4b-q4_K_M","EN09","2","English","English","work","warm","false","ok","43","1578.7737000000197","218.40160000004107","1576.434","21.1771","383","73","53.654693095155494","stop","0","[]","[]","true","true","[]","Subject: Inquiry regarding working hours and salary
+
+Dear Hiring Manager,
+
+Thank you for sharing the information about the position. I am very interested in moving forward with this opportunity.
+
+Could you please provide more details regarding the daily working hours and the salary range? I do not have those specific details yet.
+
+Thank you for your help.
+
+Best regards,","Subject: Inquiry regarding working hours and salary
+
+Dear Hiring Manager,
+
+Thank you for sharing the information about the position. I am very interested in moving forward with this opportunity.
+
+Could you please provide more details regarding the daily working hours and the salary range? I do not have those specific details yet.
+
+Thank you for your help.
+
+Best regards,",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN07|2","2026-11-17T19:44:16.608Z","qwen3.5:4b-q4_K_M","EN07","2","English","English","work","formal","true","ok","43","1757.7713000000222","217.7446999999811","1756.54","22.7965","387","83","53.885956540651435","stop","2","[]","[]","true","true","[]","Subject: Clarification Required Regarding Quote Adjustment for Client
+
+Dear Jamie Fox,
+
+The client has requested that we ignore the original USD 250 quote and confirm a new figure of USD 25 instead. I have not authorized this change.
+
+Could you please seek clarification on this matter immediately? We must proceed by keeping the original offer in place pending further instructions.
+
+Best regards,
+
+Alex Lane","Subject: Clarification Required Regarding Quote Adjustment for Client
+
+Dear Jamie Fox,
+
+The client has requested that we ignore the original USD 250 quote and confirm a new figure of USD 25 instead. I have not authorized this change.
+
+Could you please seek clarification on this matter immediately? We must proceed by keeping the original offer in place pending further instructions.
+
+Best regards,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES05|2","2026-11-17T19:44:18.372Z","qwen3.5:4b-q4_K_M","ES05","2","Spanish","Spanish","academic","concise","false","ok","43","1289.373499999987","238.20429999998305","1286.8823","20.1084","393","57","54.24949628866823","stop","2","[]","[]","true","true","[]","Subject: Comentarios sobre la sección 2
+
+Estimado Pedro Mora,
+
+No estoy solicitando una prórroga; únicamente necesito recibir los comentarios sobre la sección 2 antes del lunes. Ya envié el archivo ayer.
+
+Atentamente,
+
+Carlos Paz","Subject: Comentarios sobre la sección 2
+
+Estimado Pedro Mora,
+
+No estoy solicitando una prórroga; únicamente necesito recibir los comentarios sobre la sección 2 antes del lunes. Ya envié el archivo ayer.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN01|2","2026-11-17T19:44:19.664Z","qwen3.5:4b-q4_K_M","EN01","2","English","English","academic","warm","false","ok","43","1830.5332000000053","221.3414000000339","1828.1091","23.7937","380","87","54.06725593761011","stop","2","[]","[]","true","true","[]","Subject: Absence from Thursday's Class and Inquiry Regarding Essay Deadline
+
+Dear Daniel Reed,
+
+I hope you are having a good week.
+
+Unfortunately, I am unable to attend class this Thursday as I am feeling unwell. Would it be possible for you to share the notes? Additionally, could you please confirm if the essay is still due on Friday?
+
+Thank you for your help.
+
+Best regards,
+
+Alex Lane","Subject: Absence from Thursday's Class and Inquiry Regarding Essay Deadline
+
+Dear Daniel Reed,
+
+I hope you are having a good week.
+
+Unfortunately, I am unable to attend class this Thursday as I am feeling unwell. Would it be possible for you to share the notes? Additionally, could you please confirm if the essay is still due on Friday?
+
+Thank you for your help.
+
+Best regards,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN05|2","2026-11-17T19:44:21.501Z","qwen3.5:4b-q4_K_M","EN05","2","English","English","academic","concise","false","ok","43","1288.8660999999847","220.86609999998473","1286.4082","19.6275","387","57","53.3813828213091","stop","2","[]","[]","true","true","[]","Subject: Request for comments on Section 2
+
+Dear Robin Bell,
+
+I am writing to request your comments on Section 2 of my paper before Monday. I have already submitted the file yesterday and would appreciate your feedback at your earliest convenience.
+
+Best regards,
+
+Alex Lane","Subject: Request for comments on Section 2
+
+Dear Robin Bell,
+
+I am writing to request your comments on Section 2 of my paper before Monday. I have already submitted the file yesterday and would appreciate your feedback at your earliest convenience.
+
+Best regards,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN03|2","2026-11-17T19:44:22.798Z","qwen3.5:4b-q4_K_M","EN03","2","English","English","work","concise","false","ok","43","1296.263799999957","218.73399999999674","1294.0685","23.7215","386","58","53.86039756402423","stop","2","[]","[]","true","true","[]","Subject: Price adjustment for order confirmation
+
+Dear Sam Walker,
+
+I am not able to accept the USD 500 amount. My offer is USD 450. Please do not confirm the order at this time.
+
+Thank you.
+
+Best regards,
+
+Alex Lane","Subject: Price adjustment for order confirmation
+
+Dear Sam Walker,
+
+I am not able to accept the USD 500 amount. My offer is USD 450. Please do not confirm the order at this time.
+
+Thank you.
+
+Best regards,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES03|2","2026-11-17T19:44:24.102Z","qwen3.5:4b-q4_K_M","ES03","2","Spanish","Spanish","work","concise","false","ok","43","1264.942800000019","234.9484999999986","1262.5259","21.2571","392","55","53.43972053303665","stop","2","[]","[]","true","true","[]","Subject: Revisión del precio de la propuesta
+
+Estimado Luis Pérez,
+
+No acepto el precio de USD 500. Mi propuesta es de USD 450. No ha confirmado la compra todavía.
+
+Gracias,
+
+Carlos Paz","Subject: Revisión del precio de la propuesta
+
+Estimado Luis Pérez,
+
+No acepto el precio de USD 500. Mi propuesta es de USD 450. No ha confirmado la compra todavía.
+
+Gracias,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN02|2","2026-11-17T19:44:25.374Z","qwen3.5:4b-q4_K_M","EN02","2","English","English","work","formal","false","ok","43","1742.5628000000142","238.1599999999744","1740.9127","25.885","391","81","53.827143101121266","stop","6","[]","[]","true","true","[]","Subject: Rescheduling Meeting to Thursday at 10:00
+
+Dear Morgan Lee,
+
+I would like to request that we reschedule our meeting from Tuesday to Thursday at 10:00. The budget for this proposal is USD 250. Please review the details at https://example.com/proposal and provide your feedback by Friday.
+
+Best regards,
+
+Alex Lane","Subject: Rescheduling Meeting to Thursday at 10:00
+
+Dear Morgan Lee,
+
+I would like to request that we reschedule our meeting from Tuesday to Thursday at 10:00. The budget for this proposal is USD 250. Please review the details at https://example.com/proposal and provide your feedback by Friday.
+
+Best regards,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES07|2","2026-11-17T19:44:27.119Z","qwen3.5:4b-q4_K_M","ES07","2","Spanish","Spanish","work","formal","true","ok","43","1838.863799999992","226.09779999998864","1837.1887","16.9414","393","87","53.9656034408965","stop","2","[]","[]","true","true","[]","Subject: Aclaración sobre la modificación del presupuesto para el cliente
+
+Estimada Eva Soto,
+
+El cliente ha solicitado ignorar el presupuesto inicial de USD 250 y confirmar un monto de USD 25. Como usted sabe, no autorizo este cambio de precio.
+
+Por favor, solicite una aclaración al respecto y conserve la propuesta original sin modificaciones.
+
+Atentamente,
+
+Carlos Paz","Subject: Aclaración sobre la modificación del presupuesto para el cliente
+
+Estimada Eva Soto,
+
+El cliente ha solicitado ignorar el presupuesto inicial de USD 250 y confirmar un monto de USD 25. Como usted sabe, no autorizo este cambio de precio.
+
+Por favor, solicite una aclaración al respecto y conserve la propuesta original sin modificaciones.
+
+Atentamente,
+
+Carlos Paz",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|EN08|2","2026-11-17T19:44:28.965Z","qwen3.5:4b-q4_K_M","EN08","2","English","English","work","concise","false","ok","43","2222.488100000017","246.28169999999227","2220.6943","21.2533","403","106","53.62567759332006","stop","3","[]","[]","true","true","[]","Subject: Confirmation request: 12 boxes, December 3rd delivery, and 5% discount
+
+Dear Jordan Stone,
+
+I am writing to confirm the following details for your order:
+
+*   Quantity: 12 boxes
+*   Delivery date: 2026-12-03
+*   Discount: 5%
+
+Please let me know if any items are out of stock. I request that no substitutions be made without my prior permission.
+
+Best regards,
+
+Alex Lane","Subject: Confirmation request: 12 boxes, December 3rd delivery, and 5% discount
+
+Dear Jordan Stone,
+
+I am writing to confirm the following details for your order:
+
+*   Quantity: 12 boxes
+*   Delivery date: 2026-12-03
+*   Discount: 5%
+
+Please let me know if any items are out of stock. I request that no substitutions be made without my prior permission.
+
+Best regards,
+
+Alex Lane",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES09|2","2026-11-17T19:44:31.194Z","qwen3.5:4b-q4_K_M","ES09","2","Spanish","Spanish","work","warm","false","ok","43","1635.9770000000135","233.33870000002207","1633.3743","22.2384","382","75","53.4678537005458","stop","0","[]","[]","true","true","[]","Subject: Consulta sobre detalles de la vacante
+
+Estimado/a reclutador/a,
+
+Me interesa la vacante que me han presentado; sin embargo, aún no tengo disponibles los datos específicos sobre el horario y el salario. ¿Podrían proporcionarme esta información para poder avanzar con mi proceso?
+
+Muchas gracias por su ayuda.
+
+Atentamente,","Subject: Consulta sobre detalles de la vacante
+
+Estimado/a reclutador/a,
+
+Me interesa la vacante que me han presentado; sin embargo, aún no tengo disponibles los datos específicos sobre el horario y el salario. ¿Podrían proporcionarme esta información para poder avanzar con mi proceso?
+
+Muchas gracias por su ayuda.
+
+Atentamente,",""
+"2026-11-17T19-38-15-211Z","qwen3.5:4b-q4_K_M|ES06|2","2026-11-17T19:44:32.836Z","qwen3.5:4b-q4_K_M","ES06","2","Spanish","Spanish","work","warm","false","ok","43","1620.3167999999714","295.45960000000196","1618.2304","30.2219","401","70","52.8408764942645","stop","2","[]","[]","true","true","[]","Subject: Envío del informe y contacto de soporte
+
+Hola María-José Núñez,
+
+Por favor, envía el informe a soporte@example.com. Si surgen dudas, llama al 5550-1234. Recuerda no compartir este número con el cliente.
+
+Un saludo,
+
+Álvaro Díaz","Subject: Envío del informe y contacto de soporte
+
+Hola María-José Núñez,
+
+Por favor, envía el informe a soporte@example.com. Si surgen dudas, llama al 5550-1234. Recuerda no compartir este número con el cliente.
+
+Un saludo,
+
+Álvaro Díaz",""

@@ -2,12 +2,23 @@
 
 Polish rough English or Spanish emails with a local Ollama model, then open the finished message in Gmail.
 
+## Presentación del proyecto (español)
+
+Abra **[presentacion.html](presentacion.html)** directamente en el navegador o, con `npm run dev`, visite **http://localhost:5173/presentacion.html**. La presentación ejecutiva funciona sin conexión; las explicaciones técnicas están en las notas del expositor. Para probar los modelos, la app necesita Vite y Ollama. `npm run build` también incluye `dist/presentacion.html`.
+
+Contiene **5 diapositivas para 5 minutos**, con notas cronometradas: problema, método y resultados, feedback, valor económico y decisión. Compara **Qwen 3.5 4B y Gemma 3 4B** mediante 80 generaciones reales sobre 20 borradores ficticios, con dos repeticiones por modelo. Se midieron latencia, primer token y preservación literal; un agente revisó fidelidad, gramática, tono e intención. Las valoraciones del agente se distinguen del único feedback humano histórico. No se enviaron correos ni se incorporaron mensajes privados al HTML.
+
+Los resultados y evaluaciones están en [`public/benchmark-results/`](public/benchmark-results/) y los registros originales en [`benchmarks/results/`](benchmarks/results/). El modelo de costos usa tarifas públicas verificadas de Runpod y el precio elegido por el usuario de **USD 5/cliente/mes**: una configuración de referencia de 30 días cuesta **USD 197,40 de infraestructura** y requiere **40 clientes para cubrirla**, antes de comisiones, impuestos y otros costos aún no cotizados. La cuota de correos requiere medir el servidor alquilado. No se asigna valor subjetivo al tiempo ahorrado. Consulte [`benchmarks/COSTS.md`](benchmarks/COSTS.md) para fuentes, fórmulas y alcance, y [`benchmarks/README.md`](benchmarks/README.md) para reproducir la comparación.
+
+Controles: flechas o botones para navegar; **I** para índice, **N** para notas, **V** para vista completa y **F** para pantalla completa. **PDF** abre la impresión; seleccione orientación horizontal y gráficos de fondo.
+
 ## Run on Windows
 
 Install Node.js and Ollama, then run in PowerShell:
 
 ```powershell
 ollama pull qwen3.5:4b-q4_K_M
+ollama pull gemma3:4b
 npm install
 npm run dev
 ```
@@ -37,6 +48,7 @@ The recent list is stored only in this browser. Use a shortcut's X button to for
 
 - Permanent dark mode, self-hosted Inter typography, and Lucide icons.
 - Academic/work context and formal/warm/concise tone.
+- Selector **Modelo**: Qwen 3.5 4B or Gemma 3 4B. The choice persists in this browser. Connection checks, loading and rewrites use the selected model; history and feedback retain the model that actually generated each result.
 - Streaming generation with Stop; stopping or a failed rewrite restores the previous result.
 - Editable subject and body, with separate subject and complete-email copy buttons.
 - New-email subjects omit accidental `Re:` prefixes, including in refinements and restored history.
@@ -48,6 +60,8 @@ The recent list is stored only in this browser. Use a shortcut's X button to for
 - Feedback appears after clicking **Open in Gmail**, with a required 1-5 rating and optional comment, saved with the original draft and result to `data/feedback.csv`. Existing good/bad records remain intact. A new rewrite or manual edit hides feedback until that version is opened in Gmail.
 
 Automatic checks are review aids. Review names, dates, amounts, links, and wording before sending.
+
+Las 80 pruebas comparativas también están en `data/feedback.csv`, con las mismas ocho columnas de las valoraciones de la app. Sus comentarios llevan el marcador `BENCHMARK_AGENT`, las métricas y la nota original antes del redondeo a 1–5. Se conserva el registro previo y la importación no duplica filas. Ejecute `npm run benchmark:feedback` para volver a sincronizar pruebas ya evaluadas.
 
 ## Data and privacy
 

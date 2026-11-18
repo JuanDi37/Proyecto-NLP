@@ -1,6 +1,8 @@
 ﻿import { useEffect, useMemo, useRef, useState } from "react";
 import {
   MODEL,
+  MODELS,
+  isModel,
   checkOllama,
   detectLanguage,
   polish,
@@ -9,6 +11,7 @@ import {
   type Status,
   type Tone,
   type Options,
+  type Model,
 } from "./ollama";
 import {
   detailWarnings,
@@ -43,6 +46,7 @@ import {
 } from "./gmail";
 
 type Entry = {
+  model?: Model;
   recipientName?: string;
   senderName?: string;
   recipientEmail?: string;
@@ -68,6 +72,7 @@ function readHistory(): Entry[] {
               ) &&
               ["academic", "work"].includes(x.setting) &&
               ["formal", "warm", "concise"].includes(x.tone) &&
+              (x.model === undefined || isModel(x.model)) &&
               ["recipientName", "senderName", "recipientEmail"].every(
                 (key) => x[key] === undefined || typeof x[key] === "string",
               ),
@@ -86,6 +91,19 @@ const EXAMPLE =
   "hey prof, cant make it to class thursday im sick, can u send me the notes. also is the essay still due fri? thx";
 
 export default function App() {
+  const [model, setModel] = useState<Model>(() => {
+    try {
+      const saved = localStorage.getItem("mail-polish-model");
+      return isModel(saved) ? saved : MODEL;
+    } catch {
+      return MODEL;
+    }
+  });
+  const [generatedConfig, setGeneratedConfig] = useState({
+    model: MODEL as Model,
+    setting: "academic" as Setting,
+    tone: "formal" as Tone,
+  });
   const [recipientName, setRecipientName] = useState("");
   const [senderName, setSenderName] = useState(() => {
     try {
@@ -133,6 +151,7 @@ export default function App() {
   });
   const abortRef = useRef<AbortController | null>(null),
     runLock = useRef(false);
+  const connectionRequest = useRef(0);
   const gmailLink = useMemo(() => {
     if (!complete || busy) return { url: "", error: "" };
     try {
@@ -150,15 +169,21 @@ export default function App() {
     [source, body, showDiff],
   );
   const refresh = async () => {
+    const request = ++connectionRequest.current;
     setStatus("checking");
-    const next = await checkOllama();
+    const next = await checkOllama(model);
+    if (request !== connectionRequest.current) return;
     setStatus(next);
-    if (next === "ready") warmUp();
+    if (next === "ready") warmUp(model);
   };
   useEffect(() => {
     void refresh();
-    return () => abortRef.current?.abort();
-  }, []);
+    return () => { connectionRequest.current++; };
+  }, [model]);
+  useEffect(() => () => abortRef.current?.abort(), []);
+  useEffect(() => {
+    try { localStorage.setItem("mail-polish-model", model); } catch {}
+  }, [model]);
   useEffect(() => {
     if (!panel) return;
     const previous = document.activeElement as HTMLElement | null;
@@ -251,6 +276,7 @@ export default function App() {
       await polish(
         input,
         {
+          model,
           setting,
           tone,
           refinement,
@@ -279,6 +305,7 @@ export default function App() {
       setComplete(true);
       setSubject(parsed.subject);
       setBody(parsed.body);
+      setGeneratedConfig({ model, setting, tone });
       setGeneratedNames({
         recipient: recipientName.trim(),
         sender: senderName.trim(),
@@ -287,6 +314,7 @@ export default function App() {
         id: crypto.randomUUID(),
         date: new Date().toISOString(),
         draft: original,
+        model,
         ...parsed,
         setting,
         tone,
@@ -324,9 +352,9 @@ export default function App() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: MODEL,
-          setting,
-          tone,
+          model: generatedConfig.model,
+          setting: generatedConfig.setting,
+          tone: generatedConfig.tone,
           rating,
           draft: source,
           result: `Subject: ${subject}\n\n${body}`,
@@ -347,6 +375,11 @@ export default function App() {
     setBody(entry.body);
     setSetting(entry.setting);
     setTone(entry.tone);
+    if ((entry.model ?? MODEL) !== model) {
+      setStatus("checking");
+      setModel(entry.model ?? MODEL);
+    }
+    setGeneratedConfig({ model: entry.model ?? MODEL, setting: entry.setting, tone: entry.tone });
     setComplete(true);
     setRating(0);
     setComment("");
@@ -435,7 +468,7 @@ export default function App() {
               className="icon-button"
               aria-label="Recheck"
               title="Recheck model connection"
-              onClick={refresh}
+              onClick={() => void refresh()}
               disabled={status === "checking"}
             >
               <RefreshCw size={13} />
@@ -451,7 +484,7 @@ export default function App() {
                 : "Download the model in your terminal:"}
             </p>
             <code>
-              {status === "offline" ? "ollama serve" : `ollama pull ${MODEL}`}
+              {status === "offline" ? "ollama serve" : `ollama pull ${model}`}
             </code>
             <p>
               Then click Recheck. First-time model loading can take a minute.
@@ -472,6 +505,22 @@ export default function App() {
               <span className="toolbar-label">
                 <WandSparkles size={15} /> Rewrite preferences
               </span>
+              <label>
+                Modelo
+                <select
+                  aria-label="Modelo de Ollama"
+                  value={model}
+                  disabled={busy}
+                  onChange={(e) => {
+                    if (isModel(e.target.value)) {
+                      setStatus("checking");
+                      setModel(e.target.value);
+                    }
+                  }}
+                >
+                  {MODELS.map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}
+                </select>
+              </label>
               <label>
                 Context
                 <select
@@ -603,6 +652,11 @@ export default function App() {
                     </button>
                   )}
                 </div>
+                {complete && !busy && (
+                  <p className="model-attribution">
+                    Generado con {MODELS.find((item) => item.id === generatedConfig.model)?.label}
+                  </p>
+                )}
                 {busy || body ? (
                   <>
                     <div className="subject-edit">
@@ -990,7 +1044,7 @@ export default function App() {
                       <strong>{entry.subject || "Untitled email"}</strong>
                       <span>
                         {new Date(entry.date).toLocaleDateString()} ·{" "}
-                        {entry.setting}
+                        {entry.setting} · {MODELS.find((item) => item.id === (entry.model ?? MODEL))?.label}
                       </span>
                     </button>
                     <button
@@ -1029,8 +1083,7 @@ export default function App() {
                       recipientEmail: to,
                       subject,
                       body,
-                      setting,
-                      tone,
+                      ...generatedConfig,
                     });
                     setNotice("Current edits saved to history.");
                   }}
@@ -1046,7 +1099,7 @@ export default function App() {
             <ShieldCheck size={13} /> Thoughtful emails. Private by design.
           </span>
           <span>
-            On-device AI <span className="footer-dot">·</span> {MODEL}
+            On-device AI <span className="footer-dot">·</span> {model}
           </span>
         </footer>
       </main>

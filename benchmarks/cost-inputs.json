@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "currency": "USD",
+  "verified_on": "2026-11-17",
+  "provider": "Runpod",
+  "offering": "Pods Secure Cloud, NVIDIA RTX A5000 24 GB, 1 GPU",
+  "hourly_gpu_usd": 0.27,
+  "storage_usd_per_gb_month": 0.1,
+  "configuration": {
+    "gpu_count": 1,
+    "period_days": 30,
+    "hours_per_day": 24,
+    "container_disk_gb": 10,
+    "volume_disk_gb": 20,
+    "price_per_client_usd": 5
+  },
+  "provenance": {
+    "price_per_client_usd": "User explicitly chose USD 5/month; not estimated willingness to pay.",
+    "period_days": "Explicit 30-day comparison window; 720 billed GPU hours at 24/7.",
+    "disks": "Proposed provisioned configuration: 10 GB container + 20 GB persistent volume; not observed storage usage. Both storage types are billed.",
+    "monthly_storage": "Nominal monthly storage quote; actual invoice is prorated per second and subject to checkout terms."
+  },
+  "sources": [
+    {"url":"https://www.runpod.io/gpu-models/rtx-a5000","supports":"Secure Cloud A5000 USD 0.27/GPU-hour; Community Cloud USD 0.16/GPU-hour; availability varies by region."},
+    {"url":"https://www.runpod.io/pricing","supports":"Published GPU rate and container/volume running storage USD 0.10/GB/month."},
+    {"url":"https://docs.runpod.io/pods/pricing","supports":"Per-second GPU billing, storage charges and no data ingress/egress fees for Pods. Volume storage remains billable when stopped."},
+    {"url":"https://docs.runpod.io/pods/storage/types","supports":"Container disk and persistent volume are separate billed resources."}
+  ],
+  "not_measured_or_quoted": {
+    "payment_percentage": null,
+    "payment_fixed_usd_per_client_month": null,
+    "additional_fixed_usd_per_month": null,
+    "additional_variable_usd_per_client_month": null,
+    "tax_usd_per_month": null,
+    "seconds_per_request_on_a5000": null,
+    "sustainable_requests_per_month_on_a5000": null,
+    "requests_per_client_month": null
+  },
+  "scope": "Public infrastructure quote, not an invoice or deployment. Same rental for Qwen or Gemma on this same single-GPU configuration. Excludes unquoted taxes, collection fees, human operation, acquisition, backups and any separately contracted service. No savings or error-cost valuation.",
+  "local_power": {"status":"not_used","reason":"The benchmark did not measure AC energy of the whole computer. A later idle GPU sample reported 310.33 W with no power-limit reading; this is insufficient for a defensible whole-system electricity bill. Battery discharge is also not AC input consumption."}
+}

@@ -2,6 +2,7 @@ import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import { appendFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
+import { FEEDBACK_COLUMNS as COLUMNS, feedbackCsvCell as csvCell } from "./src/feedback-csv";
 
 // The dev server proxies /ollama -> local Ollama, which sidesteps CORS entirely.
 const proxy = {
@@ -13,24 +14,6 @@ const proxy = {
 };
 
 const FEEDBACK_FILE = resolve(__dirname, "data", "feedback.csv");
-const COLUMNS = [
-  "timestamp",
-  "model",
-  "setting",
-  "tone",
-  "rating",
-  "draft",
-  "result",
-  "feedback",
-] as const;
-
-// Line breaks are stored as a literal \n so every record stays on one line in any editor.
-const csvCell = (v: unknown) =>
-  `"${String(v ?? "")
-    .replace(/^[\s]*[=+@-]/, "'$&")
-    .replace(/"/g, '""')
-    .replace(/\r?\n/g, "\\n")}"`;
-
 /** POST /api/feedback appends one row to data/feedback.csv (UTF-8 with BOM so Excel reads accents). */
 function feedbackCsv(): Plugin {
   const handler = (req: any, res: any, next: () => void) => {
@@ -96,6 +79,14 @@ function feedbackCsv(): Plugin {
 
 export default defineConfig({
   plugins: [react(), feedbackCsv()],
+  build: {
+    rollupOptions: {
+      input: {
+        app: resolve(__dirname, "index.html"),
+        presentacion: resolve(__dirname, "presentacion.html"),
+      },
+    },
+  },
   server: { host: "localhost", port: 5173, strictPort: true, proxy },
   preview: { host: "localhost", port: 5173, strictPort: true, proxy },
 });

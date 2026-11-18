@@ -1,0 +1,716 @@
+{
+  "run_id": "2026-11-17T19-38-15-211Z",
+  "metadata": {
+    "run_id": "2026-11-17T19-38-15-211Z",
+    "started_at": "2026-11-17T19:38:16.865Z",
+    "ollama": {
+      "version": "0.40.16"
+    },
+    "node": "v26.13.0",
+    "os": "win32 10.0.26300",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13420H",
+    "ram_bytes": 33982787584,
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU, 6141 MiB, 592.82",
+    "models": [
+      {
+        "name": "gemma3:4b",
+        "model": "gemma3:4b",
+        "modified_at": "2026-11-17T13:37:14.8010511-06:00",
+        "size": 3350272403,
+        "digest": "68ceab7e468a31c988b44d5a4984a0e21f58c4f7158c6ce29c1804babac38df7",
+        "details": {
+          "parent_model": "dhiltgen/gemma3:4b-it-q4_K_M-llamacpp",
+          "format": "gguf",
+          "family": "gemma3",
+          "families": [
+            "gemma3",
+            "clip"
+          ],
+          "parameter_size": "3.9B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 2560,
+          "runner": "llamacpp"
+        },
+        "capabilities": [
+          "completion",
+          "vision"
+        ]
+      },
+      {
+        "name": "qwen3.5:4b-q4_K_M",
+        "model": "qwen3.5:4b-q4_K_M",
+        "modified_at": "2026-11-12T12:15:39.351128-06:00",
+        "size": 3324173934,
+        "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+        "details": {
+          "parent_model": "model.gguf",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "4.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 2560,
+          "runner": "llamacpp"
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ]
+      }
+    ],
+    "dataset_sha256": "90492e03e111c47b10b10379702f3673e5f98cd699fa6ca6e5205020cc562cd7",
+    "prompt_source_sha256": "b99a8c9b272a217fc6c95ae8f59247e9fc862ef99b09962607a0300bea5aaa31",
+    "repetitions": 2,
+    "cases": 20,
+    "parameters": {
+      "temperature": 0.3,
+      "num_ctx": 4096,
+      "num_predict": 512,
+      "seeds": [
+        42,
+        43
+      ],
+      "think": false
+    },
+    "method": "Blocked order reversed each repetition; one model loaded at a time; explicit unload, preload, one excluded warmup per block; seeded shuffle; raw and application-postprocessed outputs; direct loopback API; no sending.",
+    "feedback_source": "Agent review and deterministic checks, not human participant feedback; historical CSV analyzed separately.",
+    "completed_at": "2026-11-17T19:44:34.459Z",
+    "model_runtime_defaults": {
+      "gemma3:4b": {
+        "parameters": "top_p                          0.95\nstop                           \"<end_of_turn>\"\ntemperature                    1\ntop_k                          64",
+        "capabilities": [
+          "completion",
+          "vision"
+        ],
+        "model_info": {
+          "gemma3.attention.head_count": 8,
+          "gemma3.attention.head_count_kv": 4,
+          "gemma3.attention.key_length": 256,
+          "gemma3.attention.layer_norm_rms_epsilon": 0.000001,
+          "gemma3.attention.sliding_window": 1024,
+          "gemma3.attention.value_length": 256,
+          "gemma3.block_count": 34,
+          "gemma3.context_length": 131072,
+          "gemma3.embedding_length": 2560,
+          "gemma3.feed_forward_length": 10240,
+          "gemma3.rope.freq_base": 1000000,
+          "gemma3.rope.scaling.factor": 8,
+          "gemma3.rope.scaling.type": "linear",
+          "general.architecture": "gemma3",
+          "general.file_type": 15,
+          "general.parameter_count": 3880101888,
+          "general.quantization_version": 2,
+          "tokenizer.ggml.add_bos_token": true,
+          "tokenizer.ggml.add_eos_token": false,
+          "tokenizer.ggml.add_padding_token": false,
+          "tokenizer.ggml.add_unknown_token": false,
+          "tokenizer.ggml.bos_token_id": 2,
+          "tokenizer.ggml.eos_token_id": 1,
+          "tokenizer.ggml.eos_token_ids": [
+            1,
+            106
+          ],
+          "tokenizer.ggml.merges": [],
+          "tokenizer.ggml.model": "llama",
+          "tokenizer.ggml.padding_token_id": 0,
+          "tokenizer.ggml.pre": "default",
+          "tokenizer.ggml.scores": [],
+          "tokenizer.ggml.token_type": [],
+          "tokenizer.ggml.tokens": [],
+          "tokenizer.ggml.unknown_token_id": 3
+        }
+      },
+      "qwen3.5:4b-q4_K_M": {
+        "parameters": "temperature                    1\ntop_k                          20\ntop_p                          0.95\npresence_penalty               1.5",
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ],
+        "model_info": {
+          "general.architecture": "qwen35",
+          "general.base_model.0.name": "Qwen3.5 4B Base",
+          "general.base_model.0.organization": "Qwen",
+          "general.base_model.0.repo_url": "https://huggingface.co/Qwen/Qwen3.5-4B-Base",
+          "general.base_model.count": 1,
+          "general.file_type": 15,
+          "general.license": "apache-2.0",
+          "general.license.link": "https://huggingface.co/Qwen/Qwen3.5-4B/blob/main/LICENSE",
+          "general.parameter_count": 4205751296,
+          "general.quantization_version": 2,
+          "general.size_label": "4.2B",
+          "general.tags": [
+            "image-text-to-text"
+          ],
+          "general.type": "model",
+          "qwen35.attention.head_count": 16,
+          "qwen35.attention.head_count_kv": 4,
+          "qwen35.attention.key_length": 256,
+          "qwen35.attention.layer_norm_rms_epsilon": 0.000001,
+          "qwen35.attention.recurrent_layers": [
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            false
+          ],
+          "qwen35.attention.value_length": 256,
+          "qwen35.block_count": 32,
+          "qwen35.context_length": 262144,
+          "qwen35.embedding_length": 2560,
+          "qwen35.feed_forward_length": 9216,
+          "qwen35.full_attention_interval": 4,
+          "qwen35.rope.dimension_count": 64,
+          "qwen35.rope.dimension_sections": [
+            11,
+            11,
+            10,
+            0
+          ],
+          "qwen35.rope.freq_base": 10000000,
+          "qwen35.ssm.conv_kernel": 4,
+          "qwen35.ssm.group_count": 16,
+          "qwen35.ssm.inner_size": 4096,
+          "qwen35.ssm.state_size": 128,
+          "qwen35.ssm.time_step_rank": 32,
+          "tokenizer.ggml.add_bos_token": false,
+          "tokenizer.ggml.eos_token_id": 248046,
+          "tokenizer.ggml.merges": [],
+          "tokenizer.ggml.model": "gpt2",
+          "tokenizer.ggml.padding_token_id": 248044,
+          "tokenizer.ggml.pre": "qwen35",
+          "tokenizer.ggml.token_type": [],
+          "tokenizer.ggml.tokens": []
+        }
+      }
+    }
+  },
+  "models": [
+    {
+      "model": "gemma3:4b",
+      "trials": 40,
+      "distinct_cases": 20,
+      "repetitions": 2,
+      "size_gb": 3.350272403,
+      "quantization": "Q4_K_M",
+      "mean_seconds": 5.557047082499999,
+      "p50_seconds": 2.2587433999999775,
+      "p95_seconds": 5.250337924999994,
+      "max_seconds": 117.16411799999999,
+      "first_token_p50_seconds": 0.34995024999996527,
+      "first_token_p95_seconds": 0.9198703550000086,
+      "mean_tokens_per_second": 43.23906144252262,
+      "fidelity_1_to_5": 3.775,
+      "grammar_1_to_5": 4.9,
+      "tone_clarity_1_to_5": 3.75,
+      "weighted_score_1_to_5": 4.05,
+      "useful_count": 22,
+      "useful_rate": 0.55,
+      "critical_errors": 10,
+      "critical_error_rate": 0.25,
+      "literal_fact_pass_count": 36,
+      "literal_fact_pass_rate": 0.9,
+      "placeholders_count": 6,
+      "modified_by_app_count": 6
+    },
+    {
+      "model": "qwen3.5:4b-q4_K_M",
+      "trials": 40,
+      "distinct_cases": 20,
+      "repetitions": 2,
+      "size_gb": 3.324173934,
+      "quantization": "Q4_K_M",
+      "mean_seconds": 2.69769689,
+      "p50_seconds": 2.140570399999984,
+      "p95_seconds": 6.168530644999997,
+      "max_seconds": 7.500167600000001,
+      "first_token_p50_seconds": 0.2832038500000008,
+      "first_token_p95_seconds": 0.7731787350000011,
+      "mean_tokens_per_second": 41.57651484846245,
+      "fidelity_1_to_5": 4.35,
+      "grammar_1_to_5": 4.825,
+      "tone_clarity_1_to_5": 4.475,
+      "weighted_score_1_to_5": 4.5,
+      "useful_count": 33,
+      "useful_rate": 0.825,
+      "critical_errors": 3,
+      "critical_error_rate": 0.075,
+      "literal_fact_pass_count": 40,
+      "literal_fact_pass_rate": 1,
+      "placeholders_count": 0,
+      "modified_by_app_count": 0
+    }
+  ],
+  "by_language": [
+    {
+      "model": "gemma3:4b",
+      "language": "Spanish",
+      "trials": 20,
+      "mean_seconds": 8.331151899999997,
+      "useful_count": 14,
+      "score": 4.25,
+      "critical_errors": 2
+    },
+    {
+      "model": "gemma3:4b",
+      "language": "English",
+      "trials": 20,
+      "mean_seconds": 2.7829422650000004,
+      "useful_count": 8,
+      "score": 3.85,
+      "critical_errors": 8
+    },
+    {
+      "model": "qwen3.5:4b-q4_K_M",
+      "language": "Spanish",
+      "trials": 20,
+      "mean_seconds": 2.780617184999997,
+      "useful_count": 15,
+      "score": 4.3625,
+      "critical_errors": 3
+    },
+    {
+      "model": "qwen3.5:4b-q4_K_M",
+      "language": "English",
+      "trials": 20,
+      "mean_seconds": 2.614776595000003,
+      "useful_count": 18,
+      "score": 4.6375,
+      "critical_errors": 0
+    }
+  ],
+  "historical_feedback": {
+    "records": 2,
+    "numeric_ratings": 2,
+    "mean_rating": 5,
+    "source": "human feedback stored before this benchmark; not a blinded comparison",
+    "agent_note": "El ejemplo histórico valorado 5/5 añade una referencia a adjuntar un correo y convierte una condición en una afirmación. La valoración positiva no demuestra fidelidad factual. El registro no conserva los campos de nombres del perfil, por lo que su procedencia no puede determinarse."
+  },
+  "costs": {
+    "inputs": {
+      "schema_version": 1,
+      "currency": "USD",
+      "verified_on": "2026-11-17",
+      "provider": "Runpod",
+      "offering": "Pods Secure Cloud, NVIDIA RTX A5000 24 GB, 1 GPU",
+      "hourly_gpu_usd": 0.27,
+      "storage_usd_per_gb_month": 0.1,
+      "configuration": {
+        "gpu_count": 1,
+        "period_days": 30,
+        "hours_per_day": 24,
+        "container_disk_gb": 10,
+        "volume_disk_gb": 20,
+        "price_per_client_usd": 5
+      },
+      "provenance": {
+        "price_per_client_usd": "User explicitly chose USD 5/month; not estimated willingness to pay.",
+        "period_days": "Explicit 30-day comparison window; 720 billed GPU hours at 24/7.",
+        "disks": "Proposed provisioned configuration: 10 GB container + 20 GB persistent volume; not observed storage usage. Both storage types are billed.",
+        "monthly_storage": "Nominal monthly storage quote; actual invoice is prorated per second and subject to checkout terms."
+      },
+      "sources": [
+        {
+          "url": "https://www.runpod.io/gpu-models/rtx-a5000",
+          "supports": "Secure Cloud A5000 USD 0.27/GPU-hour; Community Cloud USD 0.16/GPU-hour; availability varies by region."
+        },
+        {
+          "url": "https://www.runpod.io/pricing",
+          "supports": "Published GPU rate and container/volume running storage USD 0.10/GB/month."
+        },
+        {
+          "url": "https://docs.runpod.io/pods/pricing",
+          "supports": "Per-second GPU billing, storage charges and no data ingress/egress fees for Pods. Volume storage remains billable when stopped."
+        },
+        {
+          "url": "https://docs.runpod.io/pods/storage/types",
+          "supports": "Container disk and persistent volume are separate billed resources."
+        }
+      ],
+      "not_measured_or_quoted": {
+        "payment_percentage": null,
+        "payment_fixed_usd_per_client_month": null,
+        "additional_fixed_usd_per_month": null,
+        "additional_variable_usd_per_client_month": null,
+        "tax_usd_per_month": null,
+        "seconds_per_request_on_a5000": null,
+        "sustainable_requests_per_month_on_a5000": null,
+        "requests_per_client_month": null
+      },
+      "scope": "Public infrastructure quote, not an invoice or deployment. Same rental for Qwen or Gemma on this same single-GPU configuration. Excludes unquoted taxes, collection fees, human operation, acquisition, backups and any separately contracted service. No savings or error-cost valuation.",
+      "local_power": {
+        "status": "not_used",
+        "reason": "The benchmark did not measure AC energy of the whole computer. A later idle GPU sample reported 310.33 W with no power-limit reading; this is insufficient for a defensible whole-system electricity bill. Battery discharge is also not AC input consumption."
+      }
+    },
+    "quote": {
+      "currency": "USD",
+      "gpu_count": 1,
+      "period_days": 30,
+      "hours_per_day": 24,
+      "container_disk_gb": 10,
+      "volume_disk_gb": 20,
+      "price_per_client_usd": 5,
+      "billed_gpu_hours": 720,
+      "gpu_compute_usd": 194.4,
+      "container_disk_usd": 1,
+      "volume_disk_usd": 2,
+      "infrastructure_usd": 197.4,
+      "minimum_clients_cover_infrastructure": 40,
+      "minimum_clients_positive_infrastructure_margin": 40,
+      "scope": "Infrastructure-only quote; not total business profit; assumes demand fits this one server."
+    },
+    "full_business_break_even": {
+      "status": "missing_inputs",
+      "minimum_clients": null,
+      "minimum_clients_positive_profit": null
+    },
+    "capacity": {
+      "status": "cloud_measurement_required",
+      "requests_per_client": null
+    },
+    "cashflow": [
+      {
+        "clients": 10,
+        "revenue_usd": 50,
+        "infrastructure_usd": 197.4,
+        "infrastructure_margin_usd": -147.4,
+        "excludes_unquoted_business_costs": true
+      },
+      {
+        "clients": 20,
+        "revenue_usd": 100,
+        "infrastructure_usd": 197.4,
+        "infrastructure_margin_usd": -97.4,
+        "excludes_unquoted_business_costs": true
+      },
+      {
+        "clients": 30,
+        "revenue_usd": 150,
+        "infrastructure_usd": 197.4,
+        "infrastructure_margin_usd": -47.4,
+        "excludes_unquoted_business_costs": true
+      },
+      {
+        "clients": 39,
+        "revenue_usd": 195,
+        "infrastructure_usd": 197.4,
+        "infrastructure_margin_usd": -2.4,
+        "excludes_unquoted_business_costs": true
+      },
+      {
+        "clients": 40,
+        "revenue_usd": 200,
+        "infrastructure_usd": 197.4,
+        "infrastructure_margin_usd": 2.6,
+        "excludes_unquoted_business_costs": true
+      },
+      {
+        "clients": 41,
+        "revenue_usd": 205,
+        "infrastructure_usd": 197.4,
+        "infrastructure_margin_usd": 7.6,
+        "excludes_unquoted_business_costs": true
+      },
+      {
+        "clients": 50,
+        "revenue_usd": 250,
+        "infrastructure_usd": 197.4,
+        "infrastructure_margin_usd": 52.6,
+        "excludes_unquoted_business_costs": true
+      },
+      {
+        "clients": 75,
+        "revenue_usd": 375,
+        "infrastructure_usd": 197.4,
+        "infrastructure_margin_usd": 177.6,
+        "excludes_unquoted_business_costs": true
+      },
+      {
+        "clients": 100,
+        "revenue_usd": 500,
+        "infrastructure_usd": 197.4,
+        "infrastructure_margin_usd": 302.6,
+        "excludes_unquoted_business_costs": true
+      }
+    ],
+    "sensitivity": [
+      {
+        "factor": "hourly_gpu_usd",
+        "relative_change_pct": -50,
+        "input_value": 0.135,
+        "infrastructure_usd": 100.2,
+        "minimum_clients_cover_infrastructure": 21,
+        "scenario_not_a_new_quote": true
+      },
+      {
+        "factor": "hourly_gpu_usd",
+        "relative_change_pct": -20,
+        "input_value": 0.21600000000000003,
+        "infrastructure_usd": 158.52,
+        "minimum_clients_cover_infrastructure": 32,
+        "scenario_not_a_new_quote": true
+      },
+      {
+        "factor": "hourly_gpu_usd",
+        "relative_change_pct": 0,
+        "input_value": 0.27,
+        "infrastructure_usd": 197.4,
+        "minimum_clients_cover_infrastructure": 40,
+        "scenario_not_a_new_quote": true
+      },
+      {
+        "factor": "hourly_gpu_usd",
+        "relative_change_pct": 20,
+        "input_value": 0.324,
+        "infrastructure_usd": 236.28,
+        "minimum_clients_cover_infrastructure": 48,
+        "scenario_not_a_new_quote": true
+      },
+      {
+        "factor": "hourly_gpu_usd",
+        "relative_change_pct": 50,
+        "input_value": 0.405,
+        "infrastructure_usd": 294.6,
+        "minimum_clients_cover_infrastructure": 59,
+        "scenario_not_a_new_quote": true
+      },
+      {
+        "factor": "price_per_client_usd",
+        "relative_change_pct": -50,
+        "input_value": 2.5,
+        "infrastructure_usd": 197.4,
+        "minimum_clients_cover_infrastructure": 79,
+        "scenario_not_a_new_quote": true
+      },
+      {
+        "factor": "price_per_client_usd",
+        "relative_change_pct": -20,
+        "input_value": 4,
+        "infrastructure_usd": 197.4,
+        "minimum_clients_cover_infrastructure": 50,
+        "scenario_not_a_new_quote": true
+      },
+      {
+        "factor": "price_per_client_usd",
+        "relative_change_pct": 0,
+        "input_value": 5,
+        "infrastructure_usd": 197.4,
+        "minimum_clients_cover_infrastructure": 40,
+        "scenario_not_a_new_quote": true
+      },
+      {
+        "factor": "price_per_client_usd",
+        "relative_change_pct": 20,
+        "input_value": 6,
+        "infrastructure_usd": 197.4,
+        "minimum_clients_cover_infrastructure": 33,
+        "scenario_not_a_new_quote": true
+      },
+      {
+        "factor": "price_per_client_usd",
+        "relative_change_pct": 50,
+        "input_value": 7.5,
+        "infrastructure_usd": 197.4,
+        "minimum_clients_cover_infrastructure": 27,
+        "scenario_not_a_new_quote": true
+      }
+    ],
+    "interpretation": "USD 5/month is user-specified. The quote covers renting one server; compute rent is the same for either model. No per-email cost or email quota is asserted without request volume and a benchmark on the rented GPU. Taxes, collection fees and other operating costs remain unknown, not silently zero.",
+    "execution_strategies": {
+      "verified_on": "2026-11-17",
+      "price_per_client_usd": 5,
+      "period_days": 30,
+      "pod_hourly_usd": 0.27,
+      "pod_container_gb": 10,
+      "pod_volume_gb": 20,
+      "pod_running_storage_gb_month_usd": 0.1,
+      "pod_stopped_volume_gb_month_usd": 0.2,
+      "scheduled_days": 22,
+      "scheduled_hours_per_day": 8,
+      "flex_hourly_equivalent_usd": 0.75,
+      "flex_network_volume_gb": 20,
+      "flex_network_gb_month_usd": 0.07,
+      "flex_container_gb_per_worker": 10,
+      "flex_container_gb_month_usd": 0.1,
+      "default_requests_per_client_month": 100,
+      "default_billed_seconds_per_request": 8.88,
+      "assumptions": "Response of 3.88 s is user-assumed, not measured on rented GPU. Add 5 s idle timeout and cold startup per isolated request, then round total up to seconds. Startup remains unmeasured (null): default flex costs are LOWER BOUNDS and no break-even is claimed. UI can explore a user-entered startup scenario, not a measurement. One startup per request assumes isolated activations; grouped requests can amortize startup. Fixed rental windows already include startup time, reducing available serving time. Storage budgets, taxes and fee exclusions unchanged.",
+      "sources": [
+        "https://www.runpod.io/gpu-models/rtx-a5000",
+        "https://www.runpod.io/pricing",
+        "https://docs.runpod.io/serverless/pricing",
+        "https://docs.runpod.io/pods/pricing"
+      ],
+      "assumed_response_seconds": 3.88,
+      "idle_timeout_seconds": 5,
+      "cold_start_seconds_per_request": null
+    }
+  },
+  "policies": [
+    {
+      "model": "gemma3:4b",
+      "review_threshold": 4,
+      "approved_cases": 22,
+      "trials": 40,
+      "interpretation": "Offline editorial gate; no monetary valuation or production demand inferred"
+    },
+    {
+      "model": "gemma3:4b",
+      "review_threshold": 4.25,
+      "approved_cases": 21,
+      "trials": 40,
+      "interpretation": "Offline editorial gate; no monetary valuation or production demand inferred"
+    },
+    {
+      "model": "gemma3:4b",
+      "review_threshold": 4.5,
+      "approved_cases": 12,
+      "trials": 40,
+      "interpretation": "Offline editorial gate; no monetary valuation or production demand inferred"
+    },
+    {
+      "model": "gemma3:4b",
+      "review_threshold": 4.75,
+      "approved_cases": 12,
+      "trials": 40,
+      "interpretation": "Offline editorial gate; no monetary valuation or production demand inferred"
+    },
+    {
+      "model": "gemma3:4b",
+      "review_threshold": 5,
+      "approved_cases": 2,
+      "trials": 40,
+      "interpretation": "Offline editorial gate; no monetary valuation or production demand inferred"
+    },
+    {
+      "model": "qwen3.5:4b-q4_K_M",
+      "review_threshold": 4,
+      "approved_cases": 33,
+      "trials": 40,
+      "interpretation": "Offline editorial gate; no monetary valuation or production demand inferred"
+    },
+    {
+      "model": "qwen3.5:4b-q4_K_M",
+      "review_threshold": 4.25,
+      "approved_cases": 32,
+      "trials": 40,
+      "interpretation": "Offline editorial gate; no monetary valuation or production demand inferred"
+    },
+    {
+      "model": "qwen3.5:4b-q4_K_M",
+      "review_threshold": 4.5,
+      "approved_cases": 27,
+      "trials": 40,
+      "interpretation": "Offline editorial gate; no monetary valuation or production demand inferred"
+    },
+    {
+      "model": "qwen3.5:4b-q4_K_M",
+      "review_threshold": 4.75,
+      "approved_cases": 23,
+      "trials": 40,
+      "interpretation": "Offline editorial gate; no monetary valuation or production demand inferred"
+    },
+    {
+      "model": "qwen3.5:4b-q4_K_M",
+      "review_threshold": 5,
+      "approved_cases": 16,
+      "trials": 40,
+      "interpretation": "Offline editorial gate; no monetary valuation or production demand inferred"
+    }
+  ],
+  "examples": [
+    {
+      "case_id": "ES03",
+      "draft": "Luis, no acepto el precio de USD 500. mi propuesta es USD 450. no confirmes la compra todavía. gracias",
+      "outputs": [
+        {
+          "model": "qwen3.5:4b-q4_K_M",
+          "text": "Subject: Revisión del precio de la propuesta\n\nEstimado Luis Pérez,\n\nNo acepto el precio de USD 500. Mi propuesta es de USD 450. Por favor, confirme la compra antes de proceder.\n\nGracias.\n\nAtentamente,\nCarlos Paz",
+          "feedback": "Invierte la prohibición: 'no confirmes la compra todavía' pasa a 'confirme la compra antes de proceder'. Los importes intactos y cero alertas no detectan el fallo.",
+          "critical": true
+        },
+        {
+          "model": "gemma3:4b",
+          "text": "Subject: Propuesta de Precio\n\nEstimado Luis Pérez,\n\nLe escribo en relación a la compra. No acepto el precio de USD 500. Mi propuesta es de USD 450. Por favor, no confirme la compra todavía.\n\nGracias,\n\nCarlos Paz",
+          "feedback": "Mantiene rechazo, contraoferta y no confirmar; algo extenso para conciso.",
+          "critical": false
+        }
+      ]
+    },
+    {
+      "case_id": "EN06",
+      "draft": "hi Anne-Marie O'Neil, send the report to support@example.com. for questions call 5550-1234. dont share that number with the client",
+      "outputs": [
+        {
+          "model": "qwen3.5:4b-q4_K_M",
+          "text": "Subject: Report Submission and Contact Information\n\nDear Anne-Marie O'Neil,\n\nPlease send the report to support@example.com. For any questions regarding this matter, you may call 5550-1234. Kindly ensure that this number is not shared with the client.\n\nBest regards,\n\nAlex Lane",
+          "feedback": "Mantiene petición al destinatario de enviar informe, teléfono y confidencialidad; nombre exacto.",
+          "critical": false
+        },
+        {
+          "model": "gemma3:4b",
+          "text": "Subject: Report Distribution and Support Information\n\nDear Anne-Marie O'Neil,\n\nI’m sending the report to support@example.com as requested. For any questions regarding the report, you can reach the support team at 5550-1234. Please refrain from sharing this number directly with the client.\n\nSincerely,\n\nAlex Lane",
+          "feedback": "Invierte rol: 'I'm sending the report' en vez de pedir envío al destinatario; atribuye teléfono al soporte. La app corrige apóstrofo del nombre, no la intención.",
+          "critical": true
+        }
+      ]
+    }
+  ],
+  "outliers": [
+    {
+      "model": "gemma3:4b",
+      "case_id": "ES07",
+      "repetition": 1,
+      "total_seconds": 117.16411799999999,
+      "first_token_seconds": 2.6599151999999884,
+      "server_seconds": 117.1620435,
+      "tokens_per_second": 1.187573112698549
+    }
+  ],
+  "feedback_type": "Agent editorial ratings + deterministic checks; human historical rating analyzed separately.",
+  "limits": [
+    "20 authored cases with 2 repetitions, not 80 independent emails.",
+    "Editorial reviewer is an agent and knows model identities; no inter-rater agreement.",
+    "Quality is scored after existing app postprocessing; raw output is also retained.",
+    "Latency is direct local API with a warmed model, not a production SLO or user editing time.",
+    "Outliers are retained; cause not established.",
+    "Costs use public Runpod rates for an explicit 30-day single-GPU configuration; not an actual invoice.",
+    "User selected USD 5/month. Unquoted taxes, fees and business costs remain missing; 40 clients only covers quoted infrastructure.",
+    "Cloud GPU throughput and a sustainable email quota are unmeasured. Laptop performance cannot establish cloud capacity."
+  ]
+}

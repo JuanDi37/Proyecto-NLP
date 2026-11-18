@@ -1,9 +1,17 @@
 export const MODEL = "qwen3.5:4b-q4_K_M";
+export const MODELS = [
+  { id: MODEL, label: "Qwen 3.5 · 4B" },
+  { id: "gemma3:4b", label: "Gemma 3 · 4B" },
+] as const;
+export type Model = (typeof MODELS)[number]["id"];
+export const isModel = (value: unknown): value is Model =>
+  MODELS.some((model) => model.id === value);
 
 export type Setting = "academic" | "work";
 export type Tone = "formal" | "warm" | "concise";
 
 export interface Options {
+  model?: Model;
   setting: Setting;
   tone: Tone;
   refinement?: "Shorter" | "Warmer" | "More direct";
@@ -38,7 +46,7 @@ export function detectLanguage(text: string): "Spanish" | "English" {
   return es > en ? "Spanish" : "English";
 }
 
-function systemPrompt(
+export function systemPrompt(
   { setting, tone, refinement, recipientName, senderName }: Options,
   draft: string,
 ): string {
@@ -72,7 +80,7 @@ export async function polish(
     signal,
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: MODEL,
+      model: opts.model ?? MODEL,
       stream: true,
       think: false,
       keep_alive: "30m",
@@ -125,7 +133,7 @@ export async function polish(
 export type Status = "checking" | "ready" | "no-model" | "offline";
 
 /** Checks that Ollama is up and the model is installed. */
-export async function checkOllama(): Promise<Status> {
+export async function checkOllama(model: Model = MODEL): Promise<Status> {
   try {
     const res = await fetch("/ollama/api/tags", {
       signal: AbortSignal.timeout(5000),
@@ -135,17 +143,17 @@ export async function checkOllama(): Promise<Status> {
     const names: string[] = (data.models ?? []).map(
       (m: { name: string }) => m.name,
     );
-    return names.includes(MODEL) ? "ready" : "no-model";
+    return names.includes(model) ? "ready" : "no-model";
   } catch {
     return "offline";
   }
 }
 
 /** Loads the model into VRAM so the first real request isn't slow. */
-export function warmUp(): void {
+export function warmUp(model: Model = MODEL): void {
   fetch("/ollama/api/generate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ model: MODEL, keep_alive: "30m" }),
+    body: JSON.stringify({ model, keep_alive: "30m" }),
   }).catch(() => {});
 }

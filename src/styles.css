@@ -260,6 +260,7 @@ p {
 }
 .controls {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 24px;
   min-height: 74px;
@@ -305,6 +306,13 @@ select {
 .field-label {
   font-size: 11px;
   color: var(--muted);
+}
+.model-attribution {
+  margin: 0;
+  padding: 9px 24px;
+  border-bottom: 1px solid var(--line);
+  color: #bdb4e4;
+  font-size: 11px;
 }
 .segmented {
   display: flex;

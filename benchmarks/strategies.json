@@ -1,0 +1,29 @@
+{
+  "verified_on": "2026-11-17",
+  "price_per_client_usd": 5,
+  "period_days": 30,
+  "pod_hourly_usd": 0.27,
+  "pod_container_gb": 10,
+  "pod_volume_gb": 20,
+  "pod_running_storage_gb_month_usd": 0.1,
+  "pod_stopped_volume_gb_month_usd": 0.2,
+  "scheduled_days": 22,
+  "scheduled_hours_per_day": 8,
+  "flex_hourly_equivalent_usd": 0.75,
+  "flex_network_volume_gb": 20,
+  "flex_network_gb_month_usd": 0.07,
+  "flex_container_gb_per_worker": 10,
+  "flex_container_gb_month_usd": 0.1,
+  "default_requests_per_client_month": 100,
+  "default_billed_seconds_per_request": 8.88,
+  "assumptions": "Response of 3.88 s is user-assumed, not measured on rented GPU. Add 5 s idle timeout and cold startup per isolated request, then round total up to seconds. Startup remains unmeasured (null): default flex costs are LOWER BOUNDS and no break-even is claimed. UI can explore a user-entered startup scenario, not a measurement. One startup per request assumes isolated activations; grouped requests can amortize startup. Fixed rental windows already include startup time, reducing available serving time. Storage budgets, taxes and fee exclusions unchanged.",
+  "sources": [
+    "https://www.runpod.io/gpu-models/rtx-a5000",
+    "https://www.runpod.io/pricing",
+    "https://docs.runpod.io/serverless/pricing",
+    "https://docs.runpod.io/pods/pricing"
+  ],
+  "assumed_response_seconds": 3.88,
+  "idle_timeout_seconds": 5,
+  "cold_start_seconds_per_request": null
+}

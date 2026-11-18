@@ -106,6 +106,64 @@ test("offline setup is actionable on mobile", async ({ page }) => {
   await page.screenshot({ path: "test-results/mobile.png", fullPage: true });
 });
 
+test("model selection persists and feedback keeps the model that generated the result", async ({ page, context }) => {
+  await page.route("**/ollama/api/tags", route => route.fulfill({ json: { models: [{ name: "qwen3.5:4b-q4_K_M" }, { name: "gemma3:4b" }] } }));
+  const generated: string[] = [];
+  const warmed: string[] = [];
+  const feedback: any[] = [];
+  await page.route("**/ollama/api/generate", route => { warmed.push(route.request().postDataJSON().model); return route.fulfill({ json: {} }); });
+  await page.route("**/ollama/api/chat", async route => {
+    generated.push(route.request().postDataJSON().model);
+    await route.fulfill({ body: JSON.stringify({ message: { content: result } }) });
+  });
+  await page.route("**/api/feedback", route => { feedback.push(route.request().postDataJSON()); return route.fulfill({ status: 204 }); });
+  await page.goto("/");
+  const selector = page.getByRole("combobox", { name: "Modelo de Ollama" });
+  await selector.selectOption("gemma3:4b");
+  await expect(page.getByText("Local model ready")).toBeVisible();
+  await page.getByRole("button", { name: "Try an example" }).click();
+  await page.getByRole("button", { name: "Polish email" }).click();
+  await expect(page.locator(".model-attribution")).toContainText("Gemma 3");
+  expect(generated).toEqual(["gemma3:4b"]);
+  expect(warmed).toContain("gemma3:4b");
+  await selector.selectOption("qwen3.5:4b-q4_K_M");
+  await page.getByRole("combobox", { name: "Context" }).selectOption("work");
+  const popup = page.waitForEvent("popup");
+  await page.getByRole("link", { name: "Open in Gmail" }).click();
+  await (await popup).close();
+  await page.getByRole("button", { name: "4 out of 5" }).click();
+  await page.getByRole("button", { name: "Save feedback", exact: true }).click();
+  await expect(page.getByRole("button", { name: "Feedback saved" })).toBeVisible();
+  expect(feedback[0]).toMatchObject({ model: "gemma3:4b", setting: "academic", tone: "formal", rating: 4 });
+  await page.reload();
+  await expect(selector).toHaveValue("qwen3.5:4b-q4_K_M");
+  await page.getByRole("button", { name: "History", exact: true }).click();
+  await page.locator(".history-entry").first().getByRole("button").first().click();
+  await expect(selector).toHaveValue("gemma3:4b");
+  await expect(page.locator(".model-attribution")).toContainText("Gemma 3");
+  await page.getByRole("button", { name: "Shorter", exact: true }).click();
+  await expect(page.locator(".model-attribution")).toBeVisible();
+  expect(generated).toEqual(["gemma3:4b", "gemma3:4b"]);
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
+test("availability and install instructions follow the selected model", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Try an example" }).click();
+  const selector = page.getByRole("combobox", { name: "Modelo de Ollama" });
+  await selector.selectOption("gemma3:4b");
+  await expect(page.getByText("ollama pull gemma3:4b", { exact: true })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Polish email" })).toBeDisabled();
+  await page.reload();
+  await expect(selector).toHaveValue("gemma3:4b");
+  await page.route("**/ollama/api/tags", route => route.fulfill({ json: { models: [{ name: "gemma3:4b" }] } }));
+  await page.getByRole("button", { name: "Recheck" }).click();
+  await expect(page.getByText("Local model ready")).toBeVisible();
+  await selector.selectOption("qwen3.5:4b-q4_K_M");
+  await expect(page.getByText("ollama pull qwen3.5:4b-q4_K_M", { exact: true })).toBeVisible();
+});
+
 test("feedback endpoint rejects bad ratings and foreign origins", async ({
   request,
 }) => {

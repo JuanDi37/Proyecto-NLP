@@ -1,0 +1,668 @@
+{
+  "reviewer": "Codex agent; editorial review of every final output; model identities visible; not human feedback",
+  "reviewed_at": "2026-11-17T19:53:15.406Z",
+  "rubric": {
+    "columns": [
+      "case_id",
+      "fidelity_1_to_5",
+      "grammar_1_to_5",
+      "tone_clarity_1_to_5",
+      "critical_semantic_error",
+      "feedback"
+    ],
+    "fidelity": "5 preserves material facts, actions and requests; 4 minor added framing/omission; 3 ambiguity or nonessential unsupported context; 2 material omission/action reversal; 1 opposite action with direct risk.",
+    "grammar": "5 correct; 4 minor punctuation/register issue; 3 noticeable grammatical error; 2 multiple serious errors; 1 unusable.",
+    "tone_clarity": "5 matches requested tone clearly; 4 mild verbosity/formality; 3 appreciable mismatch/ambiguity; 2 disruptive; 1 unusable.",
+    "note": "Literal fact checking, placeholders and name corrections are scored separately. Semantically equivalent date reformatting can receive good semantic fidelity yet fail strict literal preservation. Critical errors include altered prohibitions, unsupported attachments/actions and material omitted conditions. Scores are agent judgments, not calibrated human labels."
+  },
+  "groups": {
+    "Q:1": [
+      [
+        "ES01",
+        5,
+        5,
+        4,
+        false,
+        "Conserva ausencia, jueves, viernes y ambas preguntas; tratamiento más formal que el tono cálido pedido."
+      ],
+      [
+        "ES02",
+        4,
+        5,
+        4,
+        false,
+        "Conserva hora, importe y URL; 'para confirmar' es menos explícito como petición al destinatario y añade 'este evento'."
+      ],
+      [
+        "ES03",
+        1,
+        5,
+        4,
+        true,
+        "Invierte la prohibición: 'no confirmes la compra todavía' pasa a 'confirme la compra antes de proceder'. Los importes intactos y cero alertas no detectan el fallo."
+      ],
+      [
+        "ES04",
+        5,
+        5,
+        4,
+        false,
+        "Pregunta por fecha desconocida sin inventarla; expansión innecesaria pero gramatical y respetuosa."
+      ],
+      [
+        "ES05",
+        5,
+        5,
+        5,
+        false,
+        "Mantiene explícitamente que no solicita prórroga, sección 2, lunes y archivo enviado ayer."
+      ],
+      [
+        "ES06",
+        5,
+        5,
+        5,
+        false,
+        "Preserva nombres con acentos, dirección, teléfono y prohibición; buena corrección en tono cálido."
+      ],
+      [
+        "ES07",
+        5,
+        5,
+        5,
+        false,
+        "Trata la instrucción como texto del cliente y no la obedece; conserva rechazo del cambio y pide aclaración."
+      ],
+      [
+        "ES08",
+        3,
+        4,
+        3,
+        false,
+        "'Confirmar la recepción' cambia el foco de cantidad/pedido hacia recepción; alterna usted con 'avísame'. Requiere revisión aunque conserva cifras."
+      ],
+      [
+        "ES09",
+        4,
+        5,
+        4,
+        false,
+        "Mantiene consulta de horario y salario; añade que la vacante fue presentada, no documentado en el borrador."
+      ],
+      [
+        "ES10",
+        5,
+        5,
+        5,
+        false,
+        "Resuelve doble negación y preserva ensayo viernes/anexo lunes sin crear un nuevo plazo."
+      ],
+      [
+        "EN01",
+        5,
+        5,
+        4,
+        false,
+        "Preserva enfermedad, notas y pregunta de entrega; apertura algo más larga que el original."
+      ],
+      [
+        "EN02",
+        5,
+        5,
+        5,
+        false,
+        "Solicitud de reprogramación, no confirmación; mantiene ambos días, hora, importe, URL y viernes."
+      ],
+      [
+        "EN03",
+        5,
+        5,
+        5,
+        false,
+        "Mantiene rechazo de USD 500, oferta de USD 450 y orden sin confirmar."
+      ],
+      [
+        "EN04",
+        5,
+        5,
+        5,
+        false,
+        "Consulta fecha desconocida sin inventar nombres de proyecto o fechas."
+      ],
+      [
+        "EN05",
+        4,
+        3,
+        4,
+        false,
+        "Omite negación explícita de pedir prórroga; 'I have already submitted the file yesterday' combina present perfect con pasado definido."
+      ],
+      [
+        "EN06",
+        5,
+        5,
+        5,
+        false,
+        "Mantiene petición al destinatario de enviar informe, teléfono y confidencialidad; nombre exacto."
+      ],
+      [
+        "EN07",
+        4,
+        5,
+        4,
+        false,
+        "Conserva ambos importes y rechazo; agrega urgencia 'immediately' y 'until further notice' no pedidas."
+      ],
+      [
+        "EN08",
+        5,
+        5,
+        4,
+        false,
+        "Preserva condiciones; cambia formato de fecha en cuerpo pero la fecha literal queda en asunto. Algo largo para tono conciso."
+      ],
+      [
+        "EN09",
+        5,
+        5,
+        4,
+        false,
+        "Consulta horario y salario con saludo genérico; 'strong interest' intensifica ligeramente el tono."
+      ],
+      [
+        "EN10",
+        4,
+        5,
+        5,
+        false,
+        "Conserva bloqueo y PO pendiente; amplía 'check' a 'review and approve', petición no explícita en el original."
+      ]
+    ],
+    "Q:2": [
+      [
+        "ES01",
+        2,
+        5,
+        4,
+        true,
+        "Convierte '¿el ensayo sigue para el viernes?' en 'le confirmo que mi ensayo sigue programado': afirma una fecha que debía consultar."
+      ],
+      [
+        "ES02",
+        5,
+        5,
+        5,
+        false,
+        "Pide explícitamente confirmación y revisión; conserva hora, presupuesto, enlace y plazo."
+      ],
+      [
+        "ES03",
+        2,
+        4,
+        4,
+        true,
+        "Sustituye prohibición de confirmar por estado 'No ha confirmado la compra todavía'; pierde la instrucción de no proceder."
+      ],
+      [
+        "ES04",
+        5,
+        5,
+        5,
+        false,
+        "Petición clara de fecha sin inventar datos; adecuada corrección formal."
+      ],
+      [
+        "ES05",
+        5,
+        5,
+        5,
+        false,
+        "Preserva negación de prórroga y todos los hechos con buena concisión."
+      ],
+      [
+        "ES06",
+        5,
+        5,
+        5,
+        false,
+        "Conserva petición, identidad exacta y restricción de compartir teléfono."
+      ],
+      [
+        "ES07",
+        4,
+        5,
+        5,
+        false,
+        "Conserva rechazo y aclaración; 'Como usted sabe' presupone conocimiento del destinatario no acreditado."
+      ],
+      [
+        "ES08",
+        3,
+        5,
+        4,
+        false,
+        "Cifras y prohibición correctas, pero vuelve a pedir confirmar recepción en lugar del pedido/cantidad; conviene corregir la acción."
+      ],
+      [
+        "ES09",
+        4,
+        4,
+        4,
+        false,
+        "Consulta correcta; presupone vacante presentada y usa fórmulas con barras poco naturales para el tono cálido."
+      ],
+      [
+        "ES10",
+        5,
+        5,
+        4,
+        false,
+        "Aclara intención de entregar y ambos plazos; lenguaje más largo de lo necesario."
+      ],
+      [
+        "EN01",
+        5,
+        5,
+        4,
+        false,
+        "Conserva todas las solicitudes; apertura genérica agrega extensión."
+      ],
+      [
+        "EN02",
+        5,
+        5,
+        5,
+        false,
+        "Mantiene reprogramación como solicitud y todos los detalles clave."
+      ],
+      [
+        "EN03",
+        5,
+        5,
+        5,
+        false,
+        "Rechazo, contraoferta y prohibición de confirmar preservados."
+      ],
+      [
+        "EN04",
+        5,
+        5,
+        5,
+        false,
+        "Pregunta fecha sin adivinar y conserva el propósito del formulario."
+      ],
+      [
+        "EN05",
+        4,
+        3,
+        4,
+        false,
+        "Repite omisión de no pedir prórroga y error 'have already submitted ... yesterday'."
+      ],
+      [
+        "EN06",
+        5,
+        5,
+        5,
+        false,
+        "Mantiene rol del destinatario, datos y prohibición sin falsa afirmación de envío."
+      ],
+      [
+        "EN07",
+        4,
+        5,
+        4,
+        false,
+        "Rechazo y consulta correctos; añade inmediatez y futuras instrucciones no pedidas."
+      ],
+      [
+        "EN08",
+        4,
+        5,
+        5,
+        false,
+        "Preserva datos exactos y prohibición; 'for your order' presupone propiedad del pedido no especificada."
+      ],
+      [
+        "EN09",
+        4,
+        5,
+        4,
+        false,
+        "Consulta correcta pero agradece información supuestamente compartida, un antecedente no dado."
+      ],
+      [
+        "EN10",
+        4,
+        5,
+        5,
+        false,
+        "Mantiene no aprobado y no envío; amplía revisión de estado a una petición de aprobación."
+      ]
+    ],
+    "G:1": [
+      [
+        "ES01",
+        5,
+        5,
+        4,
+        false,
+        "Ausencia y preguntas intactas; apertura extensa y muy formal para cálido."
+      ],
+      [
+        "ES02",
+        4,
+        5,
+        4,
+        false,
+        "Conserva datos; 'para confirmar nuestra reunión' menos claro que pedir confirmación."
+      ],
+      [
+        "ES03",
+        5,
+        5,
+        4,
+        false,
+        "Mantiene rechazo, contraoferta y no confirmar; algo extenso para conciso."
+      ],
+      [
+        "ES04",
+        5,
+        5,
+        4,
+        false,
+        "Pregunta fecha sin inventarla; 'enormemente' y apertura alargan el mensaje."
+      ],
+      [
+        "ES05",
+        4,
+        5,
+        3,
+        false,
+        "Omite negación de prórroga y añade [Nombre del Trabajo] innecesario en asunto y cuerpo; requiere completar/eliminar marcador."
+      ],
+      [
+        "ES06",
+        2,
+        5,
+        3,
+        true,
+        "Afirma 'Le envío adjunto el informe' sin adjunto ni envío acreditados; el borrador pedía que el destinatario enviara el informe."
+      ],
+      [
+        "ES07",
+        4,
+        5,
+        3,
+        false,
+        "Respeta rechazo de cambio pero añade [Nombre del Proyecto] innecesario; asunto 'Confirmación' confunde una solicitud de aclaración."
+      ],
+      [
+        "ES08",
+        4,
+        5,
+        4,
+        false,
+        "Datos y prohibición preservados; 'para confirmar' vuelve una petición algo ambigua; usa lista tipo markdown pese al prompt."
+      ],
+      [
+        "ES09",
+        4,
+        5,
+        3,
+        false,
+        "Consulta correcta, pero supone vacante publicada y usa una redacción demasiado ceremoniosa. El posprocesamiento elimina [Sender Name]."
+      ],
+      [
+        "ES10",
+        5,
+        4,
+        5,
+        false,
+        "Preserva ensayo/anexo; debería separar 'viernes, sin embargo' con punto o punto y coma."
+      ],
+      [
+        "EN01",
+        5,
+        5,
+        4,
+        false,
+        "Preserva solicitudes y fechas; registro bastante formal para cálido."
+      ],
+      [
+        "EN02",
+        2,
+        5,
+        4,
+        true,
+        "Añade 'I have also attached the proposal' sin adjunto acreditado; pedir revisar propuesta pasa a pedir disponibilidad."
+      ],
+      [
+        "EN03",
+        2,
+        5,
+        3,
+        true,
+        "Omite rechazo de USD 500 y el importe completo; cambia prohibición temporal por espera hasta finalizar precios."
+      ],
+      [
+        "EN04",
+        4,
+        5,
+        4,
+        false,
+        "Añade [Project Name] no esencial y omite formulario; consulta fecha pero deja marcador pendiente."
+      ],
+      [
+        "EN05",
+        4,
+        5,
+        4,
+        false,
+        "Omite no solicitar extensión y cambia before Monday a by Monday, con posible ambigüedad del límite."
+      ],
+      [
+        "EN06",
+        2,
+        5,
+        3,
+        true,
+        "Invierte rol: 'I'm sending the report' en vez de pedir envío al destinatario; atribuye teléfono al soporte. La app corrige apóstrofo del nombre, no la intención."
+      ],
+      [
+        "EN07",
+        4,
+        5,
+        4,
+        false,
+        "Mantiene rechazo y presupuesto original, pero 'revision to USD 250, proposing instead ...' es confuso."
+      ],
+      [
+        "EN08",
+        3,
+        4,
+        3,
+        true,
+        "Reformula fecha literalmente y debilita prohibición: pide aviso antes de reemplazos 'without my explicit permission'; no queda clara la exigencia de autorización."
+      ],
+      [
+        "EN09",
+        3,
+        5,
+        3,
+        false,
+        "Agradece al receptor su interés en la vacante y contacto previo, alterando roles/antecedentes. La app elimina nombres de marcador."
+      ],
+      [
+        "EN10",
+        5,
+        5,
+        5,
+        false,
+        "Conserva pedido no aprobado, bloqueo de envío, revisión para miércoles y monto."
+      ]
+    ],
+    "G:2": [
+      [
+        "ES01",
+        5,
+        5,
+        4,
+        false,
+        "Conserva enfermedad y solicitudes; estilo más formal y largo que cálido."
+      ],
+      [
+        "ES02",
+        4,
+        5,
+        4,
+        false,
+        "Mismos datos, pero el verbo de confirmar es ambiguo respecto a quién confirma."
+      ],
+      [
+        "ES03",
+        5,
+        5,
+        4,
+        false,
+        "Conserva negación, precios y orden sin confirmar; preámbulo largo para conciso."
+      ],
+      [
+        "ES04",
+        5,
+        5,
+        4,
+        false,
+        "Pregunta fecha desconocida correctamente con bastante fórmula introductoria."
+      ],
+      [
+        "ES05",
+        4,
+        5,
+        4,
+        false,
+        "Pide comentarios y conserva lunes/ayer; omite explícitamente que no quiere prórroga. Sin marcador en esta repetición."
+      ],
+      [
+        "ES06",
+        2,
+        5,
+        3,
+        true,
+        "Repite afirmación de informe adjunto no acreditado y cambia la relación entre pedir envío y enviar ya el informe."
+      ],
+      [
+        "ES07",
+        4,
+        5,
+        3,
+        false,
+        "Mantiene no autorización y aclaración, pero añade marcador de proyecto y asunto de confirmación confuso."
+      ],
+      [
+        "ES08",
+        4,
+        5,
+        4,
+        false,
+        "Preserva cifras y no sustituir; redacción de confirmación en lugar de petición, lista tipo markdown."
+      ],
+      [
+        "ES09",
+        4,
+        4,
+        3,
+        false,
+        "Consulta datos desconocidos; presupone publicación y usa interesado/a. La app elimina marcador de remitente."
+      ],
+      [
+        "ES10",
+        5,
+        4,
+        5,
+        false,
+        "Conserva doble negación resuelta; coma antes de sin embargo debe corregirse."
+      ],
+      [
+        "EN01",
+        5,
+        5,
+        4,
+        false,
+        "Preguntas y enfermedad intactas, tono formal para cálido."
+      ],
+      [
+        "EN02",
+        2,
+        5,
+        4,
+        true,
+        "Inventa propuesta adjunta y hora del martes; solicita disponibilidad en lugar de revisión del documento para viernes."
+      ],
+      [
+        "EN03",
+        2,
+        5,
+        3,
+        true,
+        "Vuelve a omitir USD 500 y rechazo explícito, una condición material de negociación."
+      ],
+      [
+        "EN04",
+        4,
+        5,
+        4,
+        false,
+        "Pregunta plazo y conserva formulario, pero inserta [Project Name] innecesario."
+      ],
+      [
+        "EN05",
+        4,
+        5,
+        4,
+        false,
+        "Preserva before Monday y archivo enviado ayer; omite negación de prórroga."
+      ],
+      [
+        "EN06",
+        2,
+        5,
+        3,
+        true,
+        "Afirma estar enviando informe cuando original lo pide al receptor. Además debilita no compartir como preferencia. Nombre corregido por la app."
+      ],
+      [
+        "EN07",
+        4,
+        5,
+        4,
+        false,
+        "Mantiene ambos importes y rechazo; primera frase sobre revisión de USD 250 es ambigua, luego aclara oferta original."
+      ],
+      [
+        "EN08",
+        2,
+        5,
+        4,
+        true,
+        "Omite descuento de 5%, condición material. Fecha semánticamente equivalente pero no literal; sí preserva prohibición de sustituciones."
+      ],
+      [
+        "EN09",
+        3,
+        5,
+        3,
+        false,
+        "Inventa contacto e información previos y deja [Job Title] en asunto/cuerpo; app solo elimina nombres de marcador."
+      ],
+      [
+        "EN10",
+        5,
+        5,
+        5,
+        false,
+        "Mantiene bloqueo, aprobación pendiente, identificador, monto y petición de revisar estado."
+      ]
+    ]
+  }
+}

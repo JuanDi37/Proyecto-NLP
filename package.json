@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "benchmark": "node benchmarks/run.mjs",
+    "benchmark:report": "node benchmarks/report.mjs",
+    "benchmark:feedback": "node benchmarks/feedback.mjs",
+    "test:benchmark": "node --test benchmarks/tests/*.test.mjs",
     "test": "playwright test",
     "dev": "vite",
     "build": "tsc --noEmit && vite build",

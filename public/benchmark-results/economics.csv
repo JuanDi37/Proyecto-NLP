@@ -1,0 +1,4 @@
+﻿"component","quantity","unit","unit_price_usd","amount_usd"
+"GPU rental","720","GPU-hour","0.27","194.4"
+"Container disk","10","GB-month","0.1","1"
+"Persistent volume","20","GB-month","0.1","2"

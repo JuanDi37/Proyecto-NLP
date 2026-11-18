@@ -1,0 +1,175 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\title{Mail Polish: arquitectura y funcionamiento de una aplicación web para la reformulación local de correos electrónicos}
+\author{\IEEEauthorblockN{Juan Diego Letona}
+\IEEEauthorblockA{Carné: 20230285}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Este informe describe la arquitectura, el procesamiento lingüístico y el funcionamiento de Mail Polish, una aplicación web que transforma borradores informales en correos electrónicos con redacción profesional. El sistema integra una interfaz desarrollada con React y TypeScript, un servidor Vite y un servicio local de inferencia mediante Ollama. Permite seleccionar contexto académico o laboral, ajustar el tono, comparar modificaciones y transferir el resultado a la ventana de composición de Gmail. Se examinan la construcción de instrucciones, la recepción incremental de respuestas, el posprocesamiento determinista, la persistencia y el registro de retroalimentación. Asimismo, se analizan resultados experimentales existentes para Qwen 3.5 4B y Gemma 3 4B, obtenidos mediante 80 generaciones sobre 20 casos ficticios. En esa muestra, Qwen alcanzó una proporción de resultados útiles de 82,5\%, frente a 55,0\% de Gemma, según revisión de un agente y comprobaciones deterministas. La evidencia respalda el funcionamiento del prototipo, pero no constituye una validación de fidelidad semántica ni una medición representativa de satisfacción humana.
+\end{abstract}
+
+\begin{IEEEkeywords}
+procesamiento del lenguaje natural, modelos de lenguaje, aplicación web, inferencia local, correos electrónicos, React, Ollama.
+\end{IEEEkeywords}
+
+\section{Introducción}
+La redacción de correos académicos y laborales requiere expresar solicitudes con claridad, mantener un tono apropiado y conservar datos relevantes. Un borrador puede comunicar correctamente su intención y, al mismo tiempo, presentar errores gramaticales, abreviaturas o una organización insuficiente. Automatizar su reformulación resulta útil siempre que el usuario pueda inspeccionar y corregir el resultado antes de utilizarlo.
+
+Mail Polish aborda este problema mediante generación de texto con modelos ejecutados localmente. La página recibe un borrador en español o inglés y produce un asunto y un cuerpo editables. El usuario conserva el control sobre la revisión y el envío, que se realiza desde Gmail \cite{readme,app}.
+
+El objetivo de este informe es explicar el funcionamiento técnico de la implementación disponible. El alcance comprende arquitectura, flujo de datos, generación, mecanismos de revisión, almacenamiento y evaluación. Las afirmaciones se fundamentan en el código fuente y en los registros experimentales del repositorio; no se presupone una infraestructura de producción ni se atribuyen al sistema funcionalidades ausentes.
+
+\section{Arquitectura del sistema}
+\subsection{Componentes y responsabilidades}
+La implementación organiza sus responsabilidades en tres componentes principales. La interfaz React administra formularios, estados de conexión, edición del resultado, historial y retroalimentación. TypeScript define los tipos de modelos, tonos y opciones de generación. Vite sirve la aplicación y proporciona un intermediario HTTP hacia Ollama, además de un manejador para almacenar valoraciones en CSV \cite{app,vite}.
+
+Ollama ejecuta el modelo seleccionado en el equipo anfitrión. La configuración ofrece \texttt{qwen3.5:4b-q4\_K\_M}, utilizado de manera predeterminada, y \texttt{gemma3:4b}. La elección se conserva en el navegador y determina las comprobaciones de disponibilidad y las solicitudes posteriores \cite{ollama}.
+
+El flujo principal puede expresarse como:
+\begin{equation}
+\text{Navegador} \rightarrow \text{Vite} \rightarrow \text{Ollama local}.
+\end{equation}
+Las peticiones con prefijo \texttt{/ollama} se redirigen a \texttt{http://127.0.0.1:11434}, eliminando ese prefijo. Esto permite que el navegador utilice rutas del mismo origen. Tanto el servidor de desarrollo como el de previsualización se vinculan a \texttt{localhost}; el puerto habitual es 5173 \cite{vite}.
+
+\subsection{Distribución del código}
+El archivo \texttt{src/App.tsx} concentra la coordinación de la interfaz. El módulo \texttt{src/ollama.ts} define las instrucciones y el transporte de inferencia. Las funciones de separación, personalización y comparación se encuentran en \texttt{src/email.ts}. La construcción del enlace de Gmail y la administración de destinatarios corresponden a \texttt{src/gmail.ts}. Finalmente, \texttt{vite.config.ts} implementa el intermediario y la recepción de retroalimentación, con apoyo de \texttt{src/feedback-csv.ts} para serializar registros \cite{app,ollama,email,gmail,vite}.
+
+\section{Flujo de operación de la página}
+\subsection{Inicialización y disponibilidad}
+Al iniciar, la página recupera preferencias e historial desde \texttt{localStorage}. Posteriormente consulta \texttt{/ollama/api/tags}, con un tiempo máximo de espera de cinco segundos, para verificar la disponibilidad del servicio y del modelo. La interfaz distingue cuatro estados: comprobación, disponible, modelo no instalado y servicio desconectado \cite{app,ollama}.
+
+Cuando el modelo está disponible, una solicitud a \texttt{/ollama/api/generate} inicia su precarga con una permanencia solicitada de treinta minutos. El propósito es reducir el trabajo de carga en la primera reformulación; no implica una garantía de residencia permanente, pues esta depende del servicio y de los recursos disponibles.
+
+\subsection{Captura y configuración}
+El usuario introduce el borrador, el nombre del destinatario y su nombre como remitente. Puede elegir contexto académico o laboral y tono formal, cálido o conciso. La generación requiere un borrador no vacío y un modelo disponible. Un bloqueo mediante referencia impide iniciar solicitudes simultáneas desde la misma instancia de interfaz \cite{app}.
+
+Al finalizar, el asunto y el cuerpo quedan disponibles para edición manual y copia. Las opciones de refinamiento permiten solicitar una versión más breve, más cálida o más directa. Para estas operaciones, el sistema incorpora nuevamente el borrador original como referencia factual, además del correo previamente generado \cite{ollama}.
+
+\subsection{Cancelación y recuperación}
+Cada ejecución utiliza un \texttt{AbortController}. Antes de iniciar, la aplicación conserva el resultado anterior; si ocurre una cancelación o un error, restaura su asunto, cuerpo y estado de finalización. De esta manera, una operación incompleta no reemplaza permanentemente un resultado previo. La interfaz también presenta mensajes para errores de conexión, respuestas vacías y fallos del portapapeles \cite{app}.
+
+\section{Procesamiento del lenguaje natural}
+\subsection{Identificación del idioma}
+La identificación distingue español e inglés mediante conteo de palabras frecuentes y una bonificación por caracteres característicos del español. Si la puntuación de español supera a la de inglés, se selecciona español; en caso contrario, inglés. Se trata de una heurística implementada con expresiones regulares, sin un clasificador entrenado independiente \cite{ollama}.
+
+La decisión se incorpora explícitamente a las instrucciones para conservar el idioma del borrador. Los textos breves, ambiguos o multilingües pueden producir clasificaciones incorrectas, por lo que la conservación del idioma requiere comprobación posterior.
+
+\subsection{Construcción de instrucciones}
+La reformulación utiliza un mensaje de sistema que combina contexto, tono, idioma y nombres proporcionados. Las reglas solicitan conservar hechos, solicitudes, fechas, importes, direcciones y enlaces; corregir la forma lingüística; y evitar detalles inventados. La salida debe comenzar con una línea de asunto, seguida del cuerpo, sin explicaciones ni formato Markdown \cite{ollama}.
+
+Si falta un dato esencial distinto de un nombre, se permite un marcador explícito entre corchetes. Si falta el nombre del destinatario, se solicita un saludo general; si falta el del remitente, se omite el nombre de la firma. Estas reglas orientan la generación, pero no verifican por sí mismas la veracidad del contenido.
+
+\subsection{Inferencia y recepción incremental}
+La aplicación envía una petición \texttt{POST} a \texttt{/ollama/api/chat} con \texttt{stream: true}, \texttt{think: false}, temperatura 0,3 y contexto de 4096 tokens. El código de la aplicación no fija un máximo de tokens de salida \cite{ollama}.
+
+La respuesta se procesa como objetos JSON separados por saltos de línea. Un \texttt{TextDecoder} reconstruye el texto UTF-8 y un búfer conserva los fragmentos incompletos entre lecturas. Cada contenido recibido se concatena al resultado y actualiza la interfaz. Este mecanismo permite observar el correo durante su generación sin esperar la respuesta completa.
+
+\subsection{Posprocesamiento y personalización}
+El separador reconoce encabezados \texttt{Subject:} o \texttt{Asunto:} y extrae el cuerpo. También elimina prefijos iniciales de respuesta como \texttt{Re:}, puesto que el flujo está orientado a mensajes nuevos. Al finalizar, una función determinista ajusta el saludo y la firma a los nombres ingresados y elimina determinados marcadores nominales \cite{email}.
+
+Estas correcciones aumentan la consistencia estructural. Sin embargo, no equivalen a una validación semántica completa: un mensaje puede conservar los nombres y aun modificar una condición, una negación o el alcance de una solicitud.
+
+\section{Revisión y transferencia a Gmail}
+\subsection{Advertencias y comparación}
+La página busca datos relevantes en el borrador mediante expresiones regulares: nombres aparentes, fechas, números, importes, direcciones y enlaces. Después comprueba su presencia en el resultado y señala ciertos datos agregados, así como marcadores pendientes \cite{email}.
+
+Las verificaciones son aproximadas. La ausencia literal de un fragmento puede deberse a una reformulación legítima y su presencia no garantiza que conserve la misma relación semántica. Por ello, las advertencias funcionan como apoyo a la revisión.
+
+La visualización de cambios emplea una comparación por palabras basada en la subsecuencia común más larga. Para textos de $n$ y $m$ palabras, la tabla dinámica requiere tiempo y memoria de orden $O(nm)$. Cuando $nm>250\,000$, se utiliza una representación simplificada que muestra el original como eliminado y el resultado como agregado \cite{email}.
+
+\subsection{Composición externa}
+La transferencia exige asunto y cuerpo no vacíos y bloquea los patrones de marcadores entre corchetes. Un destinatario opcional se valida y se incorpora junto con asunto y cuerpo a un enlace construido mediante \texttt{URLSearchParams}. El destino es \texttt{https://mail.google.com/mail/u/1/} \cite{gmail}.
+
+El enlace abre la composición de Gmail en otra pestaña. El índice de cuenta no garantiza una identidad institucional, pues depende del orden de las sesiones abiertas. El usuario debe comprobar la cuenta, el destinatario y el contenido antes de enviar. La aplicación no utiliza la API de envío de Gmail, no solicita tokens de Google y no confirma la entrega. Tampoco observa cambios realizados dentro de Gmail \cite{readme,gmail}.
+
+\section{Persistencia y retroalimentación}
+\subsection{Almacenamiento en el navegador}
+El historial conserva hasta veinte correos, incluyendo borrador, resultado, contexto, tono, modelo y nombres asociados. Permite restauración, eliminación y guardado de cambios manuales. Desactivar el guardado impide nuevas incorporaciones mediante ese flujo, pero conserva los registros existentes. Los destinatarios recientes se almacenan por separado, con un máximo de ocho entradas \cite{app,gmail}.
+
+La persistencia utiliza texto sin cifrado propio de la aplicación. Su alcance corresponde al navegador y al origen utilizados; no existe sincronización entre dispositivos. Los destinatarios recientes representan aperturas de composición, no correos efectivamente enviados.
+
+\subsection{Registro de valoraciones}
+El formulario de retroalimentación se habilita después de abrir el resultado en Gmail. Solicita una puntuación entera entre uno y cinco y admite un comentario opcional. Una nueva generación o una edición manual oculta el formulario hasta que esa versión se abra nuevamente en Gmail \cite{app}.
+
+La petición \texttt{POST /api/feedback} registra ocho campos: fecha, modelo, contexto, tono, valoración, borrador, resultado y comentario. El servidor asigna la fecha, comprueba los tipos y el intervalo de valoración, rechaza orígenes explícitos ajenos y limita la carga a 256\,000 bytes. El archivo \texttt{data/feedback.csv} se escribe en UTF-8 con marca de orden de bytes. La serialización duplica comillas, transforma saltos de línea y antepone un apóstrofo a determinados inicios que podrían interpretarse como fórmulas de hoja de cálculo \cite{vite,csv}.
+
+La retroalimentación se almacena como datos; el código no implementa ajuste de pesos ni aprendizaje automático a partir de esas valoraciones.
+
+\section{Evaluación técnica registrada}
+\subsection{Metodología}
+Los registros disponibles corresponden a una ejecución del 17 de noviembre de 2026 con veinte borradores ficticios: diez en español y diez en inglés. Se realizaron dos repeticiones por modelo, para un total de ochenta generaciones. La ejecución utilizó un Intel Core i5-13420H, aproximadamente 34 GB de RAM reportados y una NVIDIA GeForce RTX 4050 Laptop con 6141 MiB de memoria, mediante Ollama 0.40.16 \cite{results,benchmark}.
+
+El experimento configuró temperatura 0,3, contexto de 4096 tokens, semillas 42 y 43, y un límite de 512 tokens de salida. Este último es específico del experimento. Se invirtió el orden de los bloques en la segunda repetición y se excluyeron las operaciones de calentamiento. Los resultados se obtuvieron mediante llamadas directas a la API local; por tanto, no representan una medición integral del tiempo percibido en el navegador \cite{benchmark}.
+
+La evaluación editorial del agente asignó fidelidad $F$, gramática $G$ y tono/claridad $T$, en escala de uno a cinco. La nota ponderada fue:
+\begin{equation}
+S=\frac{2F+G+T}{4}.
+\end{equation}
+Un resultado se consideró útil si cumplía $S\geq4$, carecía de error crítico, mantenía el idioma y los hechos explícitos, e incluía asunto sin marcadores pendientes \cite{benchmark}.
+
+\subsection{Resultados e interpretación}
+La Tabla~\ref{tab:resultados} resume los registros publicados en el repositorio. Las cifras se presentan redondeadas y no corresponden a una nueva ejecución realizada para este informe \cite{results}.
+
+\begin{table}[htbp]
+\caption{Resultados registrados: cuarenta generaciones por modelo}
+\label{tab:resultados}
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lrr}
+\toprule
+Indicador & Qwen 3.5 4B & Gemma 3 4B \\
+\midrule
+Latencia media (s) & 2,698 & 5,557 \\
+Latencia mediana (s) & 2,141 & 2,259 \\
+Percentil 95 de latencia (s) & 6,169 & 5,250 \\
+Latencia máxima (s) & 7,500 & 117,164 \\
+Mediana al primer fragmento (s) & 0,283 & 0,350 \\
+Nota ponderada (1--5) & 4,50 & 4,05 \\
+Resultados útiles & 33/40 & 22/40 \\
+Resultados útiles (\%) & 82,5 & 55,0 \\
+Errores críticos & 3/40 & 10/40 \\
+Preservación literal (\%) & 100,0 & 90,0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Qwen obtuvo mayor utilidad y menor frecuencia de errores críticos en esta muestra. Su preservación literal del 100\% coexistió con tres errores críticos, lo que evidencia que los controles literales no sustituyen una revisión semántica. Asimismo, aunque Gemma presentó mayor latencia media, su percentil 95 fue menor; el máximo de 117,164 s muestra que la media estuvo afectada por una observación extrema.
+
+La muestra contiene solo veinte casos distintos y las repeticiones no amplían esa diversidad. Las notas provienen de revisión de un agente, sin evaluación ciega ni estudio independiente con usuarios. Por ello, los resultados permiten comparar el comportamiento observado, pero no estimar una tasa de error general de producción ni demostrar satisfacción humana.
+
+\section{Verificación, privacidad y limitaciones}
+El repositorio incluye pruebas Playwright para generación, cancelación, historial, selección de modelos, validación de destinatarios, personalización y transferencia a Gmail. Las pruebas de navegador simulan Ollama y el destino Gmail, por lo que verifican flujos de interfaz sin demostrar por sí mismas la calidad del modelo real. Este informe describe su cobertura prevista y no afirma haber ejecutado esas pruebas \cite{tests}.
+
+Durante la reformulación, el texto se transmite al servicio Ollama del mismo equipo. Al abrir Gmail, asunto, cuerpo y destinatario se incluyen en una URL dirigida a Google; esta puede permanecer en el historial del navegador. El almacenamiento local y el CSV contienen texto legible, por lo que la ejecución local no equivale a cifrado ni elimina toda exposición posterior \cite{readme}.
+
+Una publicación exclusivamente estática no reproduce la funcionalidad completa: requiere un servicio de inferencia accesible y componentes equivalentes para el intermediario y el CSV. El código examinado no implementa autenticación multiusuario, administración de concurrencia de producción ni verificación formal de hechos. Estas limitaciones delimitan su alcance como prototipo local.
+
+\section{Conclusiones}
+Mail Polish integra una interfaz de edición, inferencia local y revisión asistida para reformular correos académicos y laborales. Su funcionamiento combina instrucciones configurables, recepción incremental, correcciones deterministas y persistencia local, manteniendo el envío bajo control del usuario en Gmail.
+
+Los resultados registrados favorecen a Qwen 3.5 4B en utilidad y fidelidad dentro de la muestra estudiada. Sin embargo, la existencia de errores críticos pese a la conservación literal confirma la necesidad de revisión humana. La ampliación del corpus, una evaluación independiente y mediciones sobre la infraestructura de despliegue constituyen pasos necesarios para sustentar un uso de mayor escala.
+
+\begin{thebibliography}{10}
+\bibitem{readme} Proyecto Mail Polish, ``Descripción funcional, ejecución y privacidad,'' \texttt{README.md}, repositorio Proyecto-NLP, consultado el 17 de noviembre de 2026.
+\bibitem{app} Proyecto Mail Polish, ``Interfaz y coordinación del flujo de trabajo,'' código fuente, \texttt{src/App.tsx}, consultado el 17 de noviembre de 2026.
+\bibitem{vite} Proyecto Mail Polish, ``Servidor, intermediario HTTP y recepción de retroalimentación,'' código fuente, \texttt{vite.config.ts}, consultado el 17 de noviembre de 2026.
+\bibitem{ollama} Proyecto Mail Polish, ``Modelos, instrucciones e inferencia incremental,'' código fuente, \texttt{src/ollama.ts}, consultado el 17 de noviembre de 2026.
+\bibitem{email} Proyecto Mail Polish, ``Posprocesamiento y revisión de correos,'' código fuente, \texttt{src/email.ts}, consultado el 17 de noviembre de 2026.
+\bibitem{gmail} Proyecto Mail Polish, ``Enlaces de composición y destinatarios recientes,'' código fuente, \texttt{src/gmail.ts}, consultado el 17 de noviembre de 2026.
+\bibitem{csv} Proyecto Mail Polish, ``Columnas y serialización CSV,'' código fuente, \texttt{src/feedback-csv.ts}, consultado el 17 de noviembre de 2026.
+\bibitem{results} Proyecto Mail Polish, ``Resultados y metadatos experimentales,'' \texttt{public/benchmark-results/summary.json}, ejecución \texttt{2026-11-17T19-38-15-211Z}, 17 de noviembre de 2026.
+\bibitem{benchmark} Proyecto Mail Polish, ``Metodología de comparación local de Ollama,'' \texttt{benchmarks/README.md}, consultado el 17 de noviembre de 2026.
+\bibitem{tests} Proyecto Mail Polish, ``Pruebas funcionales del navegador,'' código fuente, \texttt{tests/app.spec.ts}, consultado el 17 de noviembre de 2026.
+\end{thebibliography}
+\end{document}
