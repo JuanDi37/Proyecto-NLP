@@ -24,7 +24,7 @@ npm run dev
 ```
 
 Keep Ollama running and open **http://localhost:5173**. You can also double-click `start.bat`.
-If Ollama is offline, open its desktop app or run `ollama serve` in another terminal, then click **Recheck**.
+If Ollama is offline, open its desktop app or run `ollama serve` in another terminal. The app retries every 10 seconds while visible and when you return to its tab; you can also click **Recheck**. Missing models are detected automatically after installation too.
 
 ## Write, polish, and open in Gmail
 

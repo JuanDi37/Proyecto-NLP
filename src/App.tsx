@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useRef, useState } from "react";
+﻿import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   MODEL,
   MODELS,
@@ -168,18 +168,32 @@ export default function App() {
     () => (showDiff ? diffWords(source, body) : []),
     [source, body, showDiff],
   );
-  const refresh = async () => {
+  const refresh = useCallback(async (background = false) => {
     const request = ++connectionRequest.current;
-    setStatus("checking");
+    if (!background) setStatus("checking");
     const next = await checkOllama(model);
     if (request !== connectionRequest.current) return;
     setStatus(next);
     if (next === "ready") warmUp(model);
-  };
+  }, [model]);
   useEffect(() => {
     void refresh();
     return () => { connectionRequest.current++; };
-  }, [model]);
+  }, [refresh]);
+  useEffect(() => {
+    if (status !== "offline" && status !== "no-model") return;
+    const recheck = () => {
+      if (document.visibilityState === "visible") void refresh(true);
+    };
+    const timer = window.setInterval(recheck, 10000);
+    window.addEventListener("focus", recheck);
+    document.addEventListener("visibilitychange", recheck);
+    return () => {
+      window.clearInterval(timer);
+      window.removeEventListener("focus", recheck);
+      document.removeEventListener("visibilitychange", recheck);
+    };
+  }, [status, refresh]);
   useEffect(() => () => abortRef.current?.abort(), []);
   useEffect(() => {
     try { localStorage.setItem("mail-polish-model", model); } catch {}
@@ -487,7 +501,8 @@ export default function App() {
               {status === "offline" ? "ollama serve" : `ollama pull ${model}`}
             </code>
             <p>
-              Then click Recheck. First-time model loading can take a minute.
+              Connection retries automatically. You can also click Recheck.
+              First-time model loading can take a minute.
             </p>
           </aside>
         )}

@@ -106,6 +106,35 @@ test("offline setup is actionable on mobile", async ({ page }) => {
   await page.screenshot({ path: "test-results/mobile.png", fullPage: true });
 });
 
+test("recovers automatically when Ollama starts or a model finishes installing", async ({ page }) => {
+  await page.clock.install();
+  let availability: "offline" | "no-model" | "ready" = "offline";
+  await page.route("**/ollama/api/tags", route => {
+    if (availability === "offline") return route.abort();
+    return route.fulfill({ json: { models: availability === "ready" ? [{ name: "qwen3.5:4b-q4_K_M" }] : [] } });
+  });
+  await page.goto("/");
+  await page.getByRole("button", { name: "Try an example" }).click();
+  await expect(page.locator(".status")).toContainText("Ollama offline");
+  availability = "no-model";
+  await page.clock.fastForward(10000);
+  await expect(page.locator(".status")).toContainText("Model not installed");
+  availability = "ready";
+  await page.clock.fastForward(10000);
+  await expect(page.locator(".status")).toContainText("Local model ready");
+  await expect(page.getByRole("button", { name: "Polish email" })).toBeEnabled();
+  await expect(page.locator(".setup")).toHaveCount(0);
+});
+
+test("rechecks an offline connection when returning to the window", async ({ page }) => {
+  await page.route("**/ollama/api/tags", route => route.abort());
+  await page.goto("/");
+  await expect(page.locator(".status")).toContainText("Ollama offline");
+  await page.route("**/ollama/api/tags", route => route.fulfill({ json: { models: [{ name: "qwen3.5:4b-q4_K_M" }] } }));
+  await page.evaluate(() => window.dispatchEvent(new Event("focus")));
+  await expect(page.locator(".status")).toContainText("Local model ready");
+});
+
 test("model selection persists and feedback keeps the model that generated the result", async ({ page, context }) => {
   await page.route("**/ollama/api/tags", route => route.fulfill({ json: { models: [{ name: "qwen3.5:4b-q4_K_M" }, { name: "gemma3:4b" }] } }));
   const generated: string[] = [];
